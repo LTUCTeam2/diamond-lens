@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+/* iframe{
+    margin: 0 auto;
+} */
+
+#firstGroup{
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#secondGroup{
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 230px;
+    display: flex;
+    justify-content: center;
+
+}
+
+div{
+    display: block;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+p{
+    width: 150px;
+    text-align: center;
+    margin-left: 20px;
+
+}
+
+
+div img{
+    width: 200px;
+    height: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
