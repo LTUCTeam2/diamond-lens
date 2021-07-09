@@ -1,9 +1,11 @@
 
 footer {
-    position: absolute;
+  
+  position: relative;
+    /* position: absolute; */
     height: 180px;
     background-color:black;
-    bottom: 0px;
+    /* bottom: -1200px; */
     width: 100%;
     color: white;
 }
