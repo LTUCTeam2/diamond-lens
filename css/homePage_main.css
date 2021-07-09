@@ -1,8 +1,13 @@
 * {box-sizing: border-box}
 
 body {font-family: Verdana, sans-serif;
+     background-color: #EDEDED; 
      width: 100%;
     }
+
+main {
+  position: relative;
+}
 
 .mySlides {display: none}
 
