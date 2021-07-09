@@ -7,6 +7,13 @@ body {font-family: Verdana, sans-serif;
 .mySlides {display: none}
 
 /*================================================================== slider css===============*/
+
+
+.slideshow-container img{
+width:1000px;
+height: 350px;
+}
+
 #sliderImage {vertical-align: baseline;}
 
 .slideshow-container {
@@ -55,8 +62,8 @@ body {font-family: Verdana, sans-serif;
 }
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 9px;
+  width: 9px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -86,6 +93,7 @@ body {font-family: Verdana, sans-serif;
 
 /*=============================================================================*/
 .InnerColumn {
+  
     float: left;
     width: 33.33%;
     padding: 5px;
@@ -116,10 +124,6 @@ body {font-family: Verdana, sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-  img {
-    box-shadow: 2px 2px grey;
-  }
   button{
     padding: 12px 30px;
   }
@@ -134,3 +138,11 @@ body {font-family: Verdana, sans-serif;
     width:95%;
     margin-bottom: 1%;
   }
+  /*===========================================================================================*/
+
+ .dealsText{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 400;
+ }
