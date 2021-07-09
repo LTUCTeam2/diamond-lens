@@ -16,7 +16,7 @@ footer {
       font-size: 25px;
       color: white;
       position: absolute;
-      right: 85px;
+      right: 135px;
       bottom: 30px;
 
   }
@@ -84,16 +84,17 @@ footer nav ul li a:hover{
     font-size: 21px;
 }
 
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  
+}
 
-  .fa {
-    padding: 15px;
-    font-size: 30px;
-    width: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
   
   .fa:hover {
       opacity: 0.7;
@@ -128,7 +129,8 @@ footer nav ul li a:hover{
 
   #social {
       position: absolute;
-      right: 40px;
+      right: 0px;
       bottom: 70px;
+      width: 400px;
       
   }
