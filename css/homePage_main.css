@@ -4,6 +4,10 @@ body {font-family: Verdana, sans-serif;
      width: 100%;
     }
 
+main {
+  position: relative;
+}
+
 .mySlides {display: none}
 
 /*================================================================== slider css===============*/
