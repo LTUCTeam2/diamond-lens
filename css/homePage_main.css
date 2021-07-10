@@ -131,12 +131,17 @@ height: 500px;
     transform: translate(-50%, -50%);
   }
 
+
+ main img {
+    box-shadow: 2px 2px grey;
+
   .center {
     margin-top: 50px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
   }
   button{
     padding: 12px 30px;

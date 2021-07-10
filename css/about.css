@@ -40,6 +40,12 @@ div .imgAndpre{
 }
 
 
+.box{
+    box-shadow: 0 8px 8px -4px #000000;
+}
+
+
+
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
@@ -87,3 +93,4 @@ input[type=text], select, textarea {
 
   }
   
+
