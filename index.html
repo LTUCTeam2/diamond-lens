@@ -1,439 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diamond Lens-Home</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
 
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link rel="stylesheet" href="css/homePage_main.css">
+    <link rel="stylesheet" href="css/homePage_main.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
+      <img id="logiImage" src="headerImages/DL Logo.png" alt="Logo Image" />
+      <h1>Diamond Lens</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="pages/cameras.html" class="dropbtn">Cameras</a>
 
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="pages/accessories.html">Accessories</a>
 
-        <img id="logiImage" src="headerImages/DL Logo.png" alt="Logo Image">
-        <h1>Diamond Lens</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="pages/cameras.html" class="dropbtn">Cameras</a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="pages/about.html">About </a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="pages/about.html">About us</a>
+              <a class="dropElement" href="pages/projectstory.html"
+                >Project Story</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <a href="../pages/shoppingCart.html">
+        <img
+          id="CartImage"
+          src="https://image.flaticon.com/icons/png/512/126/126083.png"
+          alt="shoping cart"
+      /></a>
+      <span class="spanCartCounter">2</span>
 
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="pages/accessories.html">Accessories</a>
-
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-
-                </li>
-                <li class="dropdown">
-                    <a href="pages/about.html">About </a>
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="pages/about.html">About us</a>
-                        <a class="dropElement" href="pages/projectstory.html">Project Story</a>
-                        
-                    </div>
-                </li>
-            </ul>
-
-        </nav>
-        <img id="CartImage" src="https://image.flaticon.com/icons/png/512/126/126083.png" alt="shoping cart">
-        <img id="searchImage"
-            src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
-            alt="serch img">
-
-
-
-
-
+      <img
+        id="searchImage"
+        src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
+        alt="serch img"
+      />
     </header>
 
     <main>
+      <!----------------------------------------------------------- Slide Show Part------>
+      <div class="sliderHolder">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img
+              id="sliderImage"
+              src="images/slideShow_IMG/pexels-micael-widell-720742 (1).jpg"
+              style="width: 100%"
+              alt="1000X250"
+            />
+            <div class="text">Caption One</div>
+          </div>
 
-        <!----------------------------------------------------------- Slide Show Part------>
-        <div class="sliderHolder">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 5</div>
-                    <img id="sliderImage" src="images/slideShow_IMG/pexels-micael-widell-720742 (1).jpg"
-                        style="width:100%" alt="1000X250">
-                    <div class="text">Caption One</div>
-                </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img
+              id="sliderImage"
+              src="images/slideShow_IMG/pexels-alex-andrews-1983038.jpg"
+              style="width: 100%"
+              alt="1000X250"
+            />
+            <div class="text">Caption Two</div>
+          </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 5</div>
-                    <img id="sliderImage" src="images/slideShow_IMG/pexels-alex-andrews-1983038.jpg" style="width:100%"
-                        alt="1000X250">
-                    <div class="text">Caption Two</div>
-                </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img
+              id="sliderImage"
+              src="images/slideShow_IMG/pexels-derice-jason-fahnkow-1595241.jpg"
+              style="width: 100%"
+              alt="1000X250"
+            />
+            <div class="text">Caption Three</div>
+          </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 5</div>
-                    <img id="sliderImage" src="images/slideShow_IMG/pexels-derice-jason-fahnkow-1595241.jpg"
-                        style="width:100%" alt="1000X250">
-                    <div class="text">Caption Three</div>
-                </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4/ 5</div>
+            <img
+              id="sliderImage"
+              src="images/slideShow_IMG/p3.jpg"
+              style="width: 100%"
+              alt="1000X250"
+            />
+            <div class="text">Caption Text</div>
+          </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">4/ 5</div>
-                    <img id="sliderImage" src="images/slideShow_IMG/p3.jpg" style="width:100%" alt="1000X250">
-                    <div class="text">Caption Text</div>
-                </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img
+              id="sliderImage"
+              src="images/slideShow_IMG/p4.jpg"
+              style="width: 100%"
+              alt="1000X250"
+            />
+            <div class="text">Caption Text</div>
+          </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 5</div>
-                    <img id="sliderImage" src="images/slideShow_IMG/p4.jpg" style="width:100%" alt="1000X250">
-                    <div class="text">Caption Text</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-            </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <!------------------------------------------------------------------------------------->
+        <br />
 
-
-        <!--============================================================== Images Block  (Packages)==============-->
-        <div class="dealsText">
-            <h1>See our deals</h1>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
         </div>
-        
-        <div class="OuterRow">
-            <div class="OuterColumn">
+      </div>
+      <!------------------------------------------------------------------------------------->
 
-                <div class="InnerRow">
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canon.png" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
+      <!--============================================================== Images Block  (Packages)==============-->
+      <div class="dealsText">
+        <h1>See our deals</h1>
+      </div>
 
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canonFlash.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/lens.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="OuterRow">
+        <div class="OuterColumn">
+          <div class="InnerRow">
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canon.png"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
-
-                <div>
-                    <button class="center">Button </button>
-                </div>
+              </div>
             </div>
 
-            <div class="OuterColumn">
-
-                <div class="InnerRow">
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canon.png" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canonFlash.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/lens.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canonFlash.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
-
-                <div>
-                    <button class="center">Button </button>
-                </div>
+              </div>
             </div>
+
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/lens.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="center">Button</button>
+          </div>
         </div>
 
-        <div class="OuterRow">
-            <div class="OuterColumn">
-
-                <div class="InnerRow">
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canon.png" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canonFlash.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/lens.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="OuterColumn">
+          <div class="InnerRow">
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canon.png"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
-
-                <div>
-                    <button class="center">Button </button>
-                </div>
+              </div>
             </div>
 
-            <div class="OuterColumn">
-
-                <div class="InnerRow">
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canon.png" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/canonFlash.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="InnerColumn">
-                        <div class="card">
-                            <img src="images/InnerColumn_images/lens.jpg" alt="Jane" style="width:100%">
-                            <div class="container">
-                                <br>
-                                <h2>Jane Doe</h2>
-                                <p class="title3">CEO & Founder</p>
-                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                <p>example@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canonFlash.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
-
-                <div>
-                    <button class="center">Button </button>
-                </div>
+              </div>
             </div>
+
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/lens.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="center">Button</button>
+          </div>
         </div>
-        <!--=========================================================================================-->
+      </div>
 
-
-        
-
-
-        <!--============================================ Full block image =======================-->
-
-        <div class="hero-image">
-            <div>
-                <img id="fullBlockImage" src="images/full_block_image.jpg" alt="1000X250">
+      <div class="OuterRow">
+        <div class="OuterColumn">
+          <div class="InnerRow">
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canon.png"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
             </div>
-            <div class="hero-text">
-                <h1 style="font-size:50px">Everything you want in one website</h1>
+
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canonFlash.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
             </div>
+
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/lens.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="center">Button</button>
+          </div>
         </div>
 
-        <!--=========================================================================================-->
-        <!--========================================================= Last Images Block=========-->
-        <div class="row3">
-            <div class="column3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/480x250" alt="Jane" style="width:100%">
-                    <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title3">CEO & Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
-                    </div>
+        <div class="OuterColumn">
+          <div class="InnerRow">
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canon.png"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
+              </div>
             </div>
 
-            <div class="column3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/480x250" alt="Mike" style="width:100%">
-                    <div class="container3">
-                        <h2>Mike Ross</h2>
-                        <p class="title3">Art Director</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
-                    </div>
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/canonFlash.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
+              </div>
             </div>
 
-            <div class="column3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/480x250" alt="John" style="width:100%">
-                    <div class="container3">
-                        <h2>John Doe</h2>
-                        <p class="title3">Designer</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
-                    </div>
+            <div class="InnerColumn">
+              <div class="card">
+                <img
+                  src="images/InnerColumn_images/lens.jpg"
+                  alt="Jane"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <br />
+                  <h2>Jane Doe</h2>
+                  <p class="title3">CEO & Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <div>
+            <button class="center">Button</button>
+          </div>
         </div>
-        <!--=========================================================================================-->
+      </div>
+      <!--=========================================================================================-->
 
+      <!--============================================ Full block image =======================-->
+
+      <div class="hero-image">
+        <div>
+          <img
+            id="fullBlockImage"
+            src="images/full_block_image.jpg"
+            alt="1000X250"
+          />
+        </div>
+        <div class="hero-text">
+          <h1 style="font-size: 50px">Everything you want in one website</h1>
+        </div>
+      </div>
+
+      <!--=========================================================================================-->
+      <!--========================================================= Last Images Block=========-->
+      <div class="row3">
+        <div class="column3">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/480x250"
+              alt="Jane"
+              style="width: 100%"
+            />
+            <div class="container">
+              <h2>Jane Doe</h2>
+              <p class="title3">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column3">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/480x250"
+              alt="Mike"
+              style="width: 100%"
+            />
+            <div class="container3">
+              <h2>Mike Ross</h2>
+              <p class="title3">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column3">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/480x250"
+              alt="John"
+              style="width: 100%"
+            />
+            <div class="container3">
+              <h2>John Doe</h2>
+              <p class="title3">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--=========================================================================================-->
     </main>
 
-
-
     <footer>
-        <h2>Stay Conected</h2>
-        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae assumenda veniam esse
-        </p>
+      <h2>Stay Conected</h2>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+        beatae assumenda veniam esse
+      </p>
 
-        <div id="social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-youtube"></a>
-        </div>
+      <div id="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
 
+      <p id="copyRights">&copy;Diamond Lens</p>
 
-        <p id="copyRights">&copy;Diamond Lens</p>
-
-        <div id="camerasList">
-            <h4>Cameras</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="AccessoriesList">
-            <h4>Accessories</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div id="camerasList">
+        <h4>Cameras</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="AccessoriesList">
+        <h4>Accessories</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-
 
     <script src="js/homePage.js"></script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
