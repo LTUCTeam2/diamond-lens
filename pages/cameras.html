@@ -1,269 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diamond Lens-Cameras</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/camera.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/camera.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
+      <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image" />
+      <h1>Diamond Lens</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="cameras.html" class="dropbtn">Cameras</a>
 
-        <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image">
-        <h1>Diamond Lens</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="cameras.html" class="dropbtn">Cameras</a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="accessories.html">Accessories</a>
 
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="accessories.html">Accessories</a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../pages/about.html">About </a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="../pages/about.html">About us</a>
+              <a class="dropElement" href="../pages/projectstory.html"
+                >Project Story</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <a href="../pages/shoppingCart.html">
+        <img
+          id="CartImage"
+          src="https://image.flaticon.com/icons/png/512/126/126083.png"
+          alt="shoping cart"
+      /></a>
+      <span class="spanCartCounter">2</span>
 
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-
-                </li>
-                <li class="dropdown">
-                    <a href="../pages/about.html">About </a>
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="../pages/about.html">About us</a>
-                        <a class="dropElement" href="../pages/projectstory.html">Project Story</a>
-                        
-                    </div>
-                </li>
-            </ul>
-
-        </nav>
-        <img id="CartImage" src="https://image.flaticon.com/icons/png/512/126/126083.png" alt="shoping cart">
-        <img id="searchImage"
-            src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
-            alt="serch img">
-
+      <img
+        id="searchImage"
+        src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
+        alt="serch img"
+      />
     </header>
 
     <main>
-        <!-- <iframe width="1515" height="553" src="https://www.youtube.com/embed/-mgHh33igz0" autoplay='1' mute='1'
+      <!-- <iframe width="1515" height="553" src="https://www.youtube.com/embed/-mgHh33igz0" autoplay='1' mute='1'
             controls='1'></iframe> -->
-        <section id="sectionvideo">
-            <video autoplay muted loop id="myVideo">
-                <source src="../imgCameras/5th vid.mp4" type="video/mp4">
-            </video>
+      <section id="sectionvideo">
+        <video autoplay muted loop id="myVideo">
+          <source src="../imgCameras/5th vid.mp4" type="video/mp4" />
+        </video>
+      </section>
 
-        </section>
+      <section id="canoncam">
+        <div class="overlay-slide">
+          <img src="../imgCameras/canon 1.jpg" />
+          <div>
+            <h2>Canon EOS-1D X</h2>
+            <p>Price: $6,499 <br />Megapixels: 20 MP</p>
+          </div>
+        </div>
 
-        <section id="canoncam">
-            <div class="overlay-slide">
-                <img src="../imgCameras/canon 1.jpg">
-                <div>
-                    <h2>Canon EOS-1D X</h2>
-                    <p>Price: $6,499 <br>Megapixels: 20 MP</p>
-                </div>
-            </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/canon 2.png" />
+          <div>
+            <h2>Canon EOS 6D</h2>
+            <p>Price: $1,399 <br />Megapixels: 26 MP <br />Built-in Wi-Fi</p>
+          </div>
+        </div>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/canon 2.png">
-                <div>
-                    <h2>Canon EOS 6D</h2>
-                    <p>Price: $1,399 <br>Megapixels: 26 MP <br>Built-in Wi-Fi</p>
-                </div>
-            </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/canon 3.jpg" />
+          <div>
+            <h2>Canon EOS-1D X</h2>
+            <p>
+              Price: $6,499 <br />Megapixels: 20.1 MP <br />Form Factor: DSLR
+            </p>
+          </div>
+        </div>
 
+        <div class="overlay-slide">
+          <img src="../imgCameras/canon 4.jpg" />
+          <div>
+            <h2>Canon EOS R6</h2>
+            <p>
+              Price: $3,599 <br />Megapixels: 20 MP <br />Form Factor:
+              Mirrorless
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/canon 3.jpg">
-                <div>
-                    <h2>Canon EOS-1D X</h2>
-                    <p>Price: $6,499 <br>Megapixels: 20.1 MP <br>Form Factor: DSLR</p>
-                </div>
-                
-            </div>
+      <section id="nikoncam">
+        <div class="overlay-slide">
+          <img src="../imgCameras/nikon 1.png" />
+          <div>
+            <h2>Nikon W150</h2>
+            <p>Price: $169.95 <br />Megapixels: 13.2 MP <br />Zoom-NIKKOR 3x</p>
+          </div>
+        </div>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/canon 4.jpg">
-                <div>
-                    <h2>Canon EOS R6</h2>
-                    <p>Price: $3,599 <br>Megapixels: 20 MP <br>Form Factor: Mirrorless</p>
-                </div>
-            </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/Nikon 2.png" />
+          <div>
+            <h2>Nikon P1000</h2>
+            <p>Price: $999.95 <br />Megapixels: 16 MP <br />Zoom-NIKKOR 125x</p>
+          </div>
+        </div>
 
-        </section>
+        <div class="overlay-slide">
+          <img src="../imgCameras/nikon 3.png" />
 
-        <section id="nikoncam">
-            <div class="overlay-slide">
-                <img src="../imgCameras/nikon 1.png">
-                <div>
-                    <h2>Nikon W150</h2>
-                    <p>Price: $169.95 <br>Megapixels: 13.2 MP <br>Zoom-NIKKOR 3x</p>
-                </div>
-            
-            </div>
+          <div>
+            <h2>Nikon P950</h2>
+            <p>
+              Price: $1,027.96 <br />Megapixels: 16 MP <br />Zoom-NIKKOR 83x
+            </p>
+          </div>
+        </div>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/Nikon 2.png">
-                <div>
-                    <h2>Nikon P1000</h2>
-                    <p>Price: $999.95 <br>Megapixels: 16 MP <br>Zoom-NIKKOR 125x</p>
-                </div>
-            </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/nikon 4.png" />
+          <div>
+            <h2>Nikon D7500</h2>
+            <p>
+              Price: $996.95 <br />Form Factor: SLR<br />4k ultra hd + 1080p
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/nikon 3.png">
+      <section id="fullimg">
+        <img src="../imgCameras/full5.jpg" />
+      </section>
 
-                <div>
-                    <h2>Nikon P950</h2>
-                    <p>Price: $1,027.96 <br>Megapixels: 16 MP <br>Zoom-NIKKOR 83x</p>
-                </div>
-            </div>
+      <section id="redcam">
+        <div class="overlay-slide">
+          <img src="../imgCameras/red 1.png" />
+          <div>
+            <h2>Red DSMC2 Brain</h2>
+            <p>
+              Price: $54,500 <br />Megapixels: 35.4 MP <br />Sensor: MONSTRO 8K
+            </p>
+          </div>
+        </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/red 2.png" />
+          <div>
+            <h2>Red DSMC2</h2>
+            <p>
+              Price: $6,500 <br />Power Plate: Gold Mount
+              <br />Purpose:Production Kit
+            </p>
+          </div>
+        </div>
 
-            <div class="overlay-slide">
-                <img src="../imgCameras/nikon 4.png">
-                <div>
-                    <h2>Nikon D7500</h2>
-                    <p>Price: $996.95 <br>Form Factor: SLR<br>4k ultra hd + 1080p </p>
-                </div>
-    
-            </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/red 3.png" />
+          <div>
+            <h2>Red KOMODO</h2>
+            <p>
+              Price: $5,995 <br />Megapixels: 19.9 MP <br />Effective Pixels:
+              6144 x 3240
+            </p>
+          </div>
+        </div>
 
-        </section>
+        <div class="overlay-slide">
+          <img src="../imgCameras/red 4.png" />
+          <div>
+            <h2>RED Ranger</h2>
+            <p>
+              Price: $59,950 <br />Megapixels: 35.4 MP <br />Effective Pixels:
+              8192 × 4320
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="fullimg">
-            <img src="../imgCameras/full5.jpg">
-        </section>
+      <section id="sonycam">
+        <div class="overlay-slide">
+          <img src="../imgCameras/sony1.jpg" />
+          <div>
+            <h2>Sony Alpha A6400</h2>
+            <p>
+              Price: $898 <br />Megapixels: 18.1 MP<br />Form Factor: Mirrorless
+            </p>
+          </div>
+        </div>
 
-        <section id="redcam">
-            <div class="overlay-slide">
-                <img src="../imgCameras/red 1.png" >
-                <div>
-                    <h2>Red DSMC2 Brain</h2>
-                    <p>Price: $54,500 <br>Megapixels: 35.4 MP <br>Sensor: MONSTRO 8K</p>
-                </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/sony 2.jpg" />
+          <div>
+            <h2>Sony RX100 VII</h2>
+            <p>
+              Price: $1,298 <br />Megapixels: 20. 1MP <br />Form Factor: Compact
+            </p>
+          </div>
+        </div>
+        <div class="overlay-slide">
+          <img src="../imgCameras/sony 3.jpg" />
+          <div>
+            <h2>Sony DSCH300/B</h2>
+            <p>
+              Price: $149.99 <br />Optical Zoom: 35x<br />Form Factor: SLR-like
+            </p>
+          </div>
+        </div>
 
-            </div>
-            <div class="overlay-slide">
-                <img src="../imgCameras/red 2.png">
-                <div>
-                    <h2>Red DSMC2</h2>
-                    <p>Price: $6,500 <br>Power Plate: Gold Mount <br>Purpose:Production Kit</p>
-                </div>
-            </div>
-
-            <div class="overlay-slide">
-                <img src="../imgCameras/red 3.png">
-                <div>
-                    <h2>Red KOMODO</h2>
-                    <p>Price: $5,995 <br>Megapixels: 19.9 MP <br>Effective Pixels: 6144 x 3240</p>
-                </div>
-            </div>
-
-            <div class="overlay-slide">
-                <img src="../imgCameras/red 4.png">
-                <div>
-                    <h2>RED Ranger </h2>
-                    <p>Price: $59,950 <br>Megapixels: 35.4 MP <br>Effective Pixels: 8192 × 4320</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="sonycam">
-
-            <div class="overlay-slide">
-                <img src="../imgCameras/sony1.jpg">
-                <div>
-                    <h2>Sony Alpha A6400</h2>
-                    <p>Price: $898 <br>Megapixels: 18.1 MP<br>Form Factor: Mirrorless</p>
-                </div>
-            </div>
-
-            <div class="overlay-slide">
-                <img src="../imgCameras/sony 2.jpg">
-                <div>
-                    <h2>Sony RX100 VII</h2>
-                    <p>Price: $1,298 <br>Megapixels: 20. 1MP <br>Form Factor: Compact</p>
-                </div>
-            </div>
-            <div class="overlay-slide">
-                <img src="../imgCameras/sony 3.jpg">
-                <div>
-                    <h2>Sony DSCH300/B</h2>
-                    <p>Price: $149.99 <br>Optical Zoom: 35x<br>Form Factor: SLR-like</p>
-                </div>
-            </div>
-
-            <div class="overlay-slide">
-                <img src="../imgCameras/sony 4.jpg">
-                <div>
-                    <h2>Sony Alpha A6100</h2>
-                    <p>Price: $848 <br>Zoom: 16-50 mm<br>Form Factor: Mirrorless</p>
-                </div>
-            </div>
-
-        </section>
-
+        <div class="overlay-slide">
+          <img src="../imgCameras/sony 4.jpg" />
+          <div>
+            <h2>Sony Alpha A6100</h2>
+            <p>Price: $848 <br />Zoom: 16-50 mm<br />Form Factor: Mirrorless</p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
+      <h2>Stay Conected</h2>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+        beatae assumenda veniam esse
+      </p>
 
-        <h2>Stay Conected</h2>
-        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae assumenda veniam esse
-        </p>
+      <div id="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
 
-        <div id="social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-youtube"></a>
-        </div>
+      <p id="copyRights">&copy;Diamond Lens</p>
 
-        <p id="copyRights">&copy;Diamond Lens</p>
-
-        <div id="camerasList">
-            <h4>Cameras</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="AccessoriesList">
-            <h4>Accessories</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
-
+      <div id="camerasList">
+        <h4>Cameras</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="AccessoriesList">
+        <h4>Accessories</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
     <script src="../js/cart.js"></script>
-</body>
-
+  </body>
 </html>

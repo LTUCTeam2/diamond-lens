@@ -1,121 +1,113 @@
-header{
-    z-index: 2;
-    position: relative;
-    background-color: black;
-    height: 80px;
-
+header {
+  z-index: 2;
+  position: relative;
+  background-color: black;
+  height: 80px;
 }
-
+.spanCartCounter {
+  color: #eee;
+  position: absolute;
+  top: 56px;
+  right: 25px;
+}
 header #logiImage {
-    position: absolute;
-    width: 85px;
-    left: 20px;
-    top: 10px;
+  position: absolute;
+  width: 85px;
+  left: 20px;
+  top: 10px;
 }
 
 header h1 {
-    position: absolute;
-    left: 105px;
-    top: 20px;
-    font-size: 35px;
-    color: rgb(124, 64, 64);
+  position: absolute;
+  left: 105px;
+  top: 20px;
+  font-size: 35px;
+  color: rgb(124, 64, 64);
 }
 
 header nav ul li {
-    
-    display: inline-block;
-    margin-right: 45px;
-    font-size: 27px;
-    
-       
+  display: inline-block;
+  margin-right: 45px;
+  font-size: 27px;
 }
-header nav ul li:hover{
-    transform: scale(1.5);
+header nav ul li:hover {
+  transform: scale(1.5);
 }
 header nav ul li a {
-    text-decoration: none;
-    color: grey;
+  text-decoration: none;
+  color: grey;
 }
 
-header nav ul li a:hover{
-    color: rgb(233, 130, 130);
-    
-    
-    border-bottom: 2px solid rgb(197, 197, 143);
-    
+header nav ul li a:hover {
+  color: rgb(233, 130, 130);
+
+  border-bottom: 2px solid rgb(197, 197, 143);
 }
 
 header nav ul {
-    position: absolute;
-    left: 400px;
-    top: 25px;
+  position: absolute;
+  left: 400px;
+  top: 25px;
 }
 
 #CartImage {
-    width: 40px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    border-radius: 40%;
-    background-color: rgb(177, 165, 165);
-    
-    
-    
-
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 40%;
+  background-color: rgb(177, 165, 165);
 }
 #CartImage:hover {
-    border: 2px solid rgb(110, 23, 23);
-    background-color: rgb(209, 106, 106);
+  border: 2px solid rgb(110, 23, 23);
+  background-color: rgb(209, 106, 106);
 }
 #searchImage {
-    width: 40px;
-    position: absolute;
-    right: 70px;
-    top: 10px;
-    border-radius: 40%;
-    padding: 0px;
-    background-color: grey;
-    
+  width: 40px;
+  position: absolute;
+  right: 70px;
+  top: 10px;
+  border-radius: 40%;
+  padding: 0px;
+  background-color: grey;
 }
 
 #searchImage:hover {
-    border: 2px solid rgb(110, 23, 23);
-    background-color: rgb(209, 106, 106);
-    
+  border: 2px solid rgb(110, 23, 23);
+  background-color: rgb(209, 106, 106);
 }
-
-
 
 /* dropdown */
 
-
 li.dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
-    display: block; 
-  }
+  display: inline-block;
+}
 
-  .dropElement {
-      font-size: 15px;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropElement {
+  font-size: 15px;
+}
