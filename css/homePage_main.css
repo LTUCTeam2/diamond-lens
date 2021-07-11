@@ -1,8 +1,8 @@
 * {box-sizing: border-box}
 
 body {font-family: Verdana, sans-serif;
-     /* background-color: #EDEDED;  */
-     background-color: #444454;
+      background-color: #EDEDED;  
+    /* background-color: #444454;*/
      width: 100%;
     }
 main {
