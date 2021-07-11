@@ -12,6 +12,8 @@
 main img {
   border-radius: 50%;
   margin-left: 13%;
+  width: 150px;
+  height: 200px;
 }
 
 .name {
@@ -82,4 +84,30 @@ main {
 
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+
+
+/*  feedback */
+
+#webFeedbacks li {
+  color: white;
+  font-size: 25px;
+}
+
+#WebsiteFeed{
+  color: #b80606;
+  font-size: 30px;
+}
+
+.labelName {
+   color: rgb(168, 104, 104);
+   font-size: 20px;
+}
+
+legend {
+  text-align: center;
+  font-size: 30px;
+  color: #743030;
 }
