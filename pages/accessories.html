@@ -5,154 +5,367 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diamond Lens</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/accessories.css" />
-</head>
-<body>
-    <header>
-
-        <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image">
-        <h1>Diamond Lens</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="cameras.html" class="dropbtn">Cameras</a>
-
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="accessories.html">Accessories</a>
-
-                    <div class="dropdown-content">
-                        <a class="dropElement" href="#">Link 1</a>
-                        <a class="dropElement" href="#">Link 2</a>
-                        <a class="dropElement" href="#">Link 3</a>
-                        <a class="dropElement" href="#">Link 4</a>
-                    </div>
-
-                </li>
-                <li><a href="about.html">About us</a></li>
-            </ul>
-
-        </nav>
-        <img id="CartImage" src="https://image.flaticon.com/icons/png/512/126/126083.png" alt="shoping cart">
-        <img id="searchImage"
-            src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
-            alt="serch img">
-
-    </header>
-    
-    
   </head>
+  <body>
+    <header>
+      <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image" />
+      <h1>Diamond Lens</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="cameras.html" class="dropbtn">Cameras</a>
+
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="accessories.html">Accessories</a>
+
+            <div class="dropdown-content">
+              <a class="dropElement" href="#">Link 1</a>
+              <a class="dropElement" href="#">Link 2</a>
+              <a class="dropElement" href="#">Link 3</a>
+              <a class="dropElement" href="#">Link 4</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../pages/about.html">About </a>
+            <div class="dropdown-content">
+              <a class="dropElement" href="../pages/about.html">About us</a>
+              <a class="dropElement" href="../pages/projectstory.html"
+                >Project Story</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <a href="../pages/shoppingCart.html">
+        <img
+          id="CartImage"
+          src="https://image.flaticon.com/icons/png/512/126/126083.png"
+          alt="shoping cart"
+      /></a>
+
+      <span class="spanCartCounter">2</span>
+      <img
+        id="searchImage"
+        src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
+        alt="serch img"
+      />
     </header>
+
     <main>
       <section class="first_sec_big_img">
-        <img src="../accessories-img/big.png" alt="" />
+        <img
+          src="../accessories-img/Webp.net-resizeimage.png"
+          class="big"
+          alt=""
+        />
       </section>
+
       <section class="second_sec_contain_4img">
-        <div>
-          <img
-            src="../accessories-img/mid.png"
-            alt="big.png"
-          />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+        <!-- first mid size image -->
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages hide2"
+              src="../accessories-img/testsForImage.jpg"
+              alt="big.png"
+            />
+            <img
+              class="MidImages hide2"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="big.png"
+            />
+            <img
+              class="MidImages hide2"
+              src="../accessories-img/output-onlinepngtools.png"
+              alt="big.png"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
+          <div class="small">
+            <img
+              class="smallImg three"
+              src="../accessories-img/testsForImage.jpg"
+              alt=""
+            />
+          </div>
+          <div class="small">
+            <img
+              class="smallImg one"
+              src="../accessories-img/output-onlinepngtools.png"
+              alt=""
+            />
+          </div>
+          <div class="small">
+            <img
+              class="smallImg two"
+              src="../accessories-img/erwan-hesry-WahZHqnW3OI-unsplash.jpg"
+              alt=""
+            />
+          </div>
         </div>
-        <div>
-          <img
-            src="../accessories-img/mid.png"
-            alt=""
-          />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+        <!-- End of the first mid size image -->
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/output-onlinepngtools.png"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
-        <div>
-          <img
-            src="../accessories-img/mid.png"
-            alt=""
-          />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/test2.png"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            58mm Altura Photo Professional Accessory Kit for Canon EOS Rebel
+            DSLR – Bundle with Wide Angle & Fisheye Lens, Filter Kit (Macro
+            Close-Up Set, UV, CPL, ND4) Remote Control & More.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
-        <div>
-          <img
-            src="../accessories-img/mid.png"
-            alt=""
-          />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
       </section>
+
+      <section class="test">
+        <div class="divTest">
+          <div class="scaleTest">
+            <img
+              src="../accessories-img/conor-luddy-MWfsVvIJ5Ew-unsplash.jpg"
+              alt=""
+              class="testImg"
+            />
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
+        </div>
+
+        <div class="divTest">
+          <div class="scaleTest">
+            <img
+              src="../accessories-img/erwan-hesry-WahZHqnW3OI-unsplash.jpg"
+              alt=""
+              class="testImg"
+            />
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
+        </div>
+      </section>
+
       <section class="thered_sec">
-        <img src="../accessories-img/big.png" alt="" />
+        <img
+          src="../accessories-img/Webp.net-resizeimage.png"
+          class="big"
+          alt=""
+        />
       </section>
+
       <section class="last_sec_contain_4img">
-        <div>
-          <img src="../accessories-img/mid.png" alt="" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
-        <div>
-          <img src="../accessories-img/mid.png" alt="" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
-        <div>
-          <img src="../accessories-img/mid.png" alt="" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
-        <div>
-          <img src="../accessories-img/mid.png" alt="" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elie.</p>
+
+        <div class="divMIDContinuer">
+          <div class="containerForSlideShow">
+            <img
+              class="MidImages"
+              src="../accessories-img/photo-1610026397831-e975f1313588.jpg"
+              alt="Mid"
+            />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
+        </div>
+      </section>
+
+      <section class="test">
+        <div class="divTest">
+          <div class="scaleTest">
+            <img
+              src="../accessories-img/conor-luddy-MWfsVvIJ5Ew-unsplash.jpg"
+              alt=""
+              class="testImg"
+            />
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
+        </div>
+
+        <div class="divTest">
+          <div class="scaleTest">
+            <img
+              src="../accessories-img/erwan-hesry-WahZHqnW3OI-unsplash.jpg"
+              alt=""
+              class="testImg"
+            />
+          </div>
+          <p class="myPrag">
+            Lorem ipsum dolor sit amet consectetur adipisicing elie.
+          </p>
+          <p class="myPrag1"><button>Add to Cart</button></p>
         </div>
       </section>
     </main>
 
     <footer>
+      <h2>Stay Conected</h2>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+        beatae assumenda veniam esse
+      </p>
 
-        <h2>Stay Conected</h2>
-        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae assumenda veniam esse
-        </p>
+      <div id="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
 
-        <div id="social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-youtube"></a>
-        </div>
+      <p id="copyRights">&copy;Diamond Lens</p>
 
-        <p id="copyRights">&copy;Diamond Lens</p>
-
-        <div id="camerasList">
-            <h4>Cameras</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="AccessoriesList">
-            <h4>Accessories</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                    <li><a href="#">Item Name</a></li>
-                </ul>
-            </nav>
-        </div>
-
+      <div id="camerasList">
+        <h4>Cameras</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="AccessoriesList">
+        <h4>Accessories</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-</body>
-</html>
-    
 
+    <script src="../js/TestForAccessories.js"></script>
+
+    <script src="../js/cart.js"></script>
+  </body>
+</html>
