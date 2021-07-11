@@ -158,7 +158,6 @@ console.log(Content.contentArray[0].brand);
     contentTitle2.innerHTML = Content.contentArray[pack2].lensTitle;
     contentTitle3.innerHTML = Content.contentArray[pack2].micTitle;
   }
-
  if(Content.contentArray[2].brand === 'sony')
   {
       //=========================================================================== First Case Sony ==================
@@ -194,7 +193,6 @@ console.log(Content.contentArray[0].brand);
       contentTitleSecond2.innerHTML = Content.contentArray[pack4].lensTitle;
       contentTitleSecond3.innerHTML = Content.contentArray[pack4].micTitle;
   }
-
 }
 //============================================= SlideShow Code================================
 var slideIndex = 0;
