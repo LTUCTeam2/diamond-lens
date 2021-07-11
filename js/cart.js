@@ -1,43 +1,64 @@
+/* eslint-disable quotes */
+/* eslint-disable no-unused-vars */
 "use strict";
+// get the span id to send the value to local storage
 
-// makeing constractor for Cart main
-
-let Cartmaker = function (Name, model, Price) {
-  this.Name = Name;
-  this.model = model;
-  this.Price = Price;
-  Cartmaker.arrayOfObjects.push(this);
-};
-
-Cartmaker.arrayOfObjects = [];
-
-console.table(Cartmaker.arrayOfObjects);
-
-// make constructor using array that will be used in the cart every argenamt have there one array
-let arrayOfItemsName = ["sony", "red", "nicon", "canon"];
-let arrayOfItemsModel = ["x", "xx", "xxx", "xxxx"];
-let arrayOfItemsPrice = [100, 200, 300, 400];
-let p = document.querySelectorAll(".myPrag");
-console.log(p);
-// using for loop to make objects
-for (let i = 0; i < arrayOfItemsName.length; i++) {
-  new Cartmaker(
-    arrayOfItemsName[i],
-    arrayOfItemsModel[i],
-    arrayOfItemsPrice[i]
-  );
-  p[i].textContent = `${arrayOfItemsName[i]}`;
-  p[i].setAttribute("class", `${arrayOfItemsName[i]}`);
+// function to set get ls
+function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
 }
-console.table(Cartmaker.arrayOfObjects);
-const spanCartCounter = document.getElementById("cartCounter");
-const myBtn = document.getElementsByTagName("button");
-let i;
-console.log(myBtn);
-for (i = 0; i < myBtn.length; i++) {
-  myBtn[i].addEventListener("click", cartCounterFunc);
+let containerForCartPage = document.querySelectorAll(".a");
+// function to set set ls
+function setLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
 }
+let arrayOfLocalStorage = [];
+const spanCartCounter = document.querySelector(".spanCartCounter");
+const main = document.querySelector("#main");
 
-function cartCounterFunc(e) {
-  console.log(e.target.value);
+spanCartCounter.textContent = getLocalStorage("incart");
 
+const constructorFromAccessJsFile = getLocalStorage("acces");
+let test = [];
+let counter = 0;
+function cartKeysChecker() {
+  for (let i = 0; i < constructorFromAccessJsFile.length; i++) {
+    if (getLocalStorage(constructorFromAccessJsFile[i].Name) !== null) {
+      arrayOfLocalStorage[i] = getLocalStorage(
+        constructorFromAccessJsFile[i].Name
+      );
+      //   console.log("i", i);
+      //   let a = document.createElement("div");
+      //     a.setAttribute("class", "a");
+      //     a.setAttribute("class", "spanCartCounter");
+      test = [];
+      test.push(arrayOfLocalStorage[i].Name);
+      test.push(arrayOfLocalStorage[i].model);
+      test.push(arrayOfLocalStorage[i].Price);
+      test.push(arrayOfLocalStorage[i].inCart);
+      test.push(arrayOfLocalStorage[i].Price * arrayOfLocalStorage[i].inCart);
+      let section = document.createElement("section");
+      section.setAttribute("class", `${arrayOfLocalStorage[i].model}`);
+      let hr = document.createElement("hr");
+      main.appendChild(hr);
+      main.appendChild(section);
+      for (let j = 0; j < test.length; j++) {
+        containerForCartPage = document.querySelectorAll(".a");
+        console.log("j", j);
+        console.log("counter", counter);
+        let a = document.createElement("div");
+        a.setAttribute("class", "containerForCartPage a");
+        section.appendChild(a);
+        console.log(test[j]);
+        console.log(containerForCartPage);
+        containerForCartPage[counter].textContent = test[j];
+        counter++;
+      }
+    }
+  }
+}
+cartKeysChecker();
+
+//   test = arrayOfLocalStorage.map((x) => x.Name);
+//   test1 = arrayOfLocalStorage.map((x) => x.model);
+//   test2 = arrayOfLocalStorage.map((x) => x.Price);
