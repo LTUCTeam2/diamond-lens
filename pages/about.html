@@ -12,9 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../style.css" />
+
     <link rel="stylesheet" href="../css/about.css" />
   </head>
+
   <body>
     <header>
       <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image" />
@@ -49,6 +50,7 @@
               <a class="dropElement" href="../pages/projectstory.html"
                 >Project Story</a
               >
+              <a class="dropElement" href="../pages/feedback.html">Feedback</a>
             </div>
           </li>
         </ul>
@@ -59,7 +61,7 @@
           src="https://image.flaticon.com/icons/png/512/126/126083.png"
           alt="shoping cart"
       /></a>
-      <span class="spanCartCounter">2</span>
+      <span class="spanCartCounter"></span>
 
       <img
         id="searchImage"
@@ -79,11 +81,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
       <div class="box">
         <div class="imgAndpre">
-          <img src="https://via.placeholder.com/200X200 " alt="" />
+          <img src="../headerImages/mypic.jpg " alt="" />
           <pre class="intro">
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ratione, nam quam consequatur necessitatibus accusamus laboriosam adipisci omnis.
-        Ad non voluptatibus doloremque laudantium, rem, dignissimos accusantium repellendus, ipsa quibusdam officia deserunt!</pre
+          LinkedIN: 
+          Github:
+          Email:
+        
+        </pre
           >
         </div>
         <h2 class="name">Nashaat Zaatreh</h2>
@@ -93,9 +97,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <div class="imgAndpre">
           <img src="https://via.placeholder.com/200X200" alt="" />
           <pre class="intro">
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ratione, nam quam consequatur necessitatibus accusamus laboriosam adipisci omnis.
-        Ad non voluptatibus doloremque laudantium, rem, dignissimos accusantium repellendus, ipsa quibusdam officia deserunt!</pre
+          LinkedIN: 
+          Github:
+          Email:
+          Major:
+      </pre
           >
         </div>
         <h2 class="name">Ahmad Jaber</h2>
@@ -104,9 +110,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <div class="imgAndpre">
           <img src="https://via.placeholder.com/200X200" alt="" />
           <pre class="intro">
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ratione, nam quam consequatur necessitatibus accusamus laboriosam adipisci omnis.
-        Ad non voluptatibus doloremque laudantium, rem, dignissimos accusantium repellendus, ipsa quibusdam officia deserunt!</pre
+          LinkedIN: 
+          Github:
+          Email:
+          Major:
+        </pre
           >
         </div>
         <h2 class="name">Ahmad Jallad</h2>
@@ -115,9 +123,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <div class="imgAndpre">
           <img src="https://via.placeholder.com/200X200" alt="" />
           <pre class="intro">
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ratione, nam quam consequatur necessitatibus accusamus laboriosam adipisci omnis.
-        Ad non voluptatibus doloremque laudantium, rem, dignissimos accusantium repellendus, ipsa quibusdam officia deserunt!</pre
+ LinkedIN: 
+          Github:
+          Email:
+          Major:</pre
           >
         </div>
         <h2 class="name">Haneen Darwish</h2>
@@ -126,52 +135,50 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <div class="imgAndpre">
           <img src="https://via.placeholder.com/200X200" alt="" />
           <pre class="intro">
-Lorem ipsum dolor sit amet
-         consectetur adipisicing elit.
-        Ratione, nam quam 
-        
-        consequatur necessitatibus accusamus laboriosam adipisci omnis.
-        Ad non voluptatibus doloremque laudantium, rem, dignissimos accusantium repellendus, ipsa quibusdam officia deserunt!</pre
+LinkedIN: 
+          Github:
+          Email:
+          Major:</pre
           >
         </div>
         <h2 class="name">Tamara Bassam</h2>
       </div>
 
       <div class="container">
-        <legend>your feedback</legend>
+        <legend>Your feedback</legend>
         <form id="form">
-          <label for="fname">First Name</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your name"
-          />
+          
+        <label class="labelName" for="fname">First Name</label>
+        <input type="text" id="fname" name="firstName" placeholder="Your name" required />
 
-          <label for="lname">Last Name</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name"
-          />
+        <label class="labelName" for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastName" placeholder="Your last name" required />
 
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="jordan">jordan</option>
-            <option value="palestine">palestine</option>
-            <option value="syria">syria</option>
-          </select>
 
-          <label for="feedback">Feedback</label>
-          <textarea
-            id="feedback"
-            name="feedback"
-            placeholder="Write something.."
-            style="height: 200px"
-          ></textarea>
+        <label class="labelName" for="gender">Gender</label>
+        <select id="gender" name="gender"  required>
+          <option ></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
 
-          <input type="submit" value="Submit" />
+        <label class="labelName" for="country">Country</label>
+        <select id="country" name="country"  required>
+          <option ></option>
+          <option value="jordan">Jordan</option>
+          <option value="palestine">Palestine</option>
+          <option value="syria">Syria</option>
+        </select>
+
+
+        <label class="labelName" for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" placeholder="Write something.." style="height: 100px"
+          required></textarea>
+
+        <!-- <input type="submit" value="Submit" formaction="../pages/feedback.html"/> -->
+        
+
+          <input id="formSubmit" type="submit" value="Submit" />
         </form>
       </div>
     </main>
@@ -215,6 +222,7 @@ Lorem ipsum dolor sit amet
         </nav>
       </div>
     </footer>
-    <script src="../js/cart.js"></script>
+
+    <script src="../js/feedback.js"></script>
   </body>
 </html>
