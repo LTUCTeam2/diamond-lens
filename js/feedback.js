@@ -170,3 +170,17 @@ function saveToLs(){
   getFromLs();
 
 
+
+
+// for cart purposes
+// function to set get ls
+function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+// function to set set ls
+function setLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+const spanCartCounter = document.querySelector(".spanCartCounter");
+spanCartCounter.textContent = getLocalStorage("inCart");
