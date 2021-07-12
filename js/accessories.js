@@ -19,12 +19,12 @@ function setLocalStorage(key, value) {
 
 // function to textContent the cart number
 function setContentForCart() {
-  if (getLocalStorage("incart") === null) {
-    setLocalStorage("incart", 1);
-    spanCartCounter.textContent = getLocalStorage("incart");
+  if (getLocalStorage("inCart") === null) {
+    setLocalStorage("inCart", 1);
+    spanCartCounter.textContent = getLocalStorage("inCart");
   } else {
-    setLocalStorage("incart", getLocalStorage("incart") + 1);
-    spanCartCounter.textContent = getLocalStorage("incart");
+    setLocalStorage("inCart", getLocalStorage("inCart") + 1);
+    spanCartCounter.textContent = getLocalStorage("inCart");
   }
 }
 
@@ -64,7 +64,7 @@ function cartCounterFunc(e) {
   setContentForCart();
   cartChecker(e.target.id);
 }
-spanCartCounter.textContent = getLocalStorage("incart");
+spanCartCounter.textContent = getLocalStorage("inCart");
 // function that get the index for the object
 function objectGrader(id) {
   let num = Cartmaker.arrayOfObjects.findIndex((x) =>
