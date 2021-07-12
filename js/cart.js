@@ -16,7 +16,7 @@ let arrayOfLocalStorage = [];
 const spanCartCounter = document.querySelector(".spanCartCounter");
 const main = document.querySelector("#main");
 
-spanCartCounter.textContent = getLocalStorage("incart");
+spanCartCounter.textContent = getLocalStorage("inCart");
 
 const constructorFromAccessJsFile = getLocalStorage("acces");
 let test = [];
