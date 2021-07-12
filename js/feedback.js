@@ -3,11 +3,12 @@
 let feedbackForm = document.getElementById ('form')
 let webFeedbacks = document.getElementById ('webFeedbacks')
 
-function Formconstructor (firstName, lastName, feedback, country){
+function Formconstructor (firstName, lastName, feedback, country , gender){
     this.firstName = firstName;
     this.lastName = lastName; 
     this.feedback = feedback;
     this.country = country;
+    this.gender = gender
     Formconstructor.formArray.push(this);
 
     saveToLs();
@@ -27,9 +28,10 @@ function submit (event){
     const newFirstName = event.target.fname.value;
     const newLastName = event.target.lname.value; 
     const newfeedback = event.target.feedback.value;
-    const newCountry = event.target.country.value;  
+    const newCountry = event.target.country.value; 
+    const newGender = event.target.gender.value; 
 
-    new Formconstructor (newFirstName, newLastName, newfeedback, newCountry );
+    new Formconstructor (newFirstName, newLastName, newfeedback, newCountry, newGender );
     // console.log(Formconstructor.formArray);
 
     // Direct to feedback page
@@ -141,12 +143,17 @@ function saveToLs(){
         feedbackElement.textContent= ` feedback : ${Formconstructor.formArray[i].feedback}`;
     
     
+        if (Formconstructor.formArray[i].gender === 'Male') {
+          x.setAttribute("src", "https://www.w3schools.com/howto/img_avatar.png");
+        } else {
+          x.setAttribute("src", "https://www.w3schools.com/howto/img_avatar2.png");
+        }   
         
-    
-        x.setAttribute("src", "https://www.w3schools.com/howto/img_avatar.png");
         x.setAttribute("width", "230");
         x.setAttribute("height", "228");
         x.setAttribute("alt", "card image");
+
+        // console.log(Formconstructor.formArray[i].gender);
         
     
       }

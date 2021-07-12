@@ -5,7 +5,10 @@
     margin: 15px;
     font-weight:bolder;
 }
+/* +++++++++copy +++++++++ */
 
+
+/* ++++++++++++opast+++++++++++++++ */
 
 
 
@@ -19,12 +22,25 @@
     
   } */
 
+  .card{margin: 100px;
+    box-shadow: 10px 10px 10px 10px black;
+    transition: 0.3s;
+    width: 15%;
+    
+    float: left;}
+
+    .card:hover{
+      box-shadow: 10px 10px 10px 10px rgb(177, 75, 75); 
+    }
+
+
+
   .everyCardDiv{
       margin: 100px;
       box-shadow: 10px 10px 10px 10px black;
       transition: 0.3s;
       width: 15%;
-      margin: 100px;
+      
       float: left;
       
       
