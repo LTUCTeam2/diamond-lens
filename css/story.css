@@ -22,6 +22,16 @@ body {
     
 }
 
+main div div div h2 {
+  color: #FF9F55;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+main div div div p {
+  margin: 3px;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
