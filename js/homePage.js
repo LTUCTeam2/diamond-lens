@@ -3,6 +3,9 @@
 
 //=============================== Consts ===============
 
+
+
+
 //=============================== buttons IDs=========
 
 const bt1 = document.getElementById('btn1');
@@ -10,18 +13,12 @@ const bt2 = document.getElementById('btn2');
 const bt3 = document.getElementById('btn3');
 const bt4 = document.getElementById('btn4');
 
-
-bt1.addEventListener('click', handler);
-bt2.addEventListener('click', handler);
-bt3.addEventListener('click', handler);
-bt4.addEventListener('click', handler);
-
 //===== Packages ====
 
 const p1 = document.getElementById('package1');
 const p2 = document.getElementById('package2');
-// const p3 = document.getElementById('package3');
-// const p4 = document.getElementById('package4');
+const p3 = document.getElementById('package3');
+const p4 = document.getElementById('package4');
 
 
 
@@ -67,9 +64,9 @@ let pack4;
 
 //================================= Constructor =========
 
-function Content(packagePrice, packageName, camerName, camerSource, cameraTitle, cameraDescription, 
+function Content(packagePrice, packageName, camerName, camerSource, cameraTitle, cameraDescription,
   lensName, lensSource, lensTitle, lensDescription, micName, micSource, micTitle, micDescription, brand) {
-  this.packagePrice=packagePrice;
+  this.packagePrice = packagePrice;
   this.packageName = packageName;
 
   this.camerName = camerName;
@@ -95,30 +92,39 @@ function Content(packagePrice, packageName, camerName, camerSource, cameraTitle,
 Content.contentArray = [];
 //========================== Created Objects =============
 
-new Content('5000','canon 1','canon',
+new Content('5000',
+  'canon1',
+  'canon',
   '../images/InnerColumn_images/canon.png',
-  'DSLR', 'EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit',
-  'l1', '../images/InnerColumn_images/l1.png',
-  'Macro', 'RF100mm F2.8 L MACRO IS USM',
-  'mic', '../images/InnerColumn_images/mic.gif',
-  'Microphone', 'Directional Microphone DM-E1', 'canon');
+  'DSLR',
+  'EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit',
+  'l1',
+  '../images/InnerColumn_images/l1.png',
+  'Macro',
+  'RF100mm F2.8 L MACRO IS USM',
+  'mic',
+  '../images/InnerColumn_images/mic.gif',
+  'Microphone', 
+  'Directional Microphone DM-E1', 
+  'canon');
 
-new Content('5300','canon 2','canon2', '../images/InnerColumn_images/canon2.png', 'DSLR', 'EOS RP RF24-105mm F4-7.1 IS STM Lens Kit',
+
+new Content('5300', 'canon2', 'canon2', '../images/InnerColumn_images/canon2.png', 'DSLR', 'EOS RP RF24-105mm F4-7.1 IS STM Lens Kit',
   'l2', '../images/InnerColumn_images/l2.png', 'Telephoto Zoom', 'RF70-200mm F4 L IS USM',
   'mic2', '../images/InnerColumn_images/mic2.png', 'Microphone', 'Stereo Microphone DME100', 'canon');
 
 
 
-new Content('4900','sony 1','sony',
+new Content('4900', 'sony1', 'sony',
   '../images/InnerColumn_images/sony1.webp',
   'DSLR', 'EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit',
   'l1', '../images/InnerColumn_images/l1.png',
   'Macro', 'RF100mm F2.8 L MACRO IS USM',
   'mic', '../images/InnerColumn_images/mic.gif',
   'Microphone', 'Directional Microphone DM-E1', 'sony');
-  
 
-new Content('8400','sony 2','sony2', '../images/InnerColumn_images/canon2.png', 'DSLR', 'EOS RP RF24-105mm F4-7.1 IS STM Lens Kit',
+
+new Content('8400', 'sony2', 'sony2', 'images/InnerColumn_images/sony2.png', 'DSLR', 'EOS RP RF24-105mm F4-7.1 IS STM Lens Kit',
   'l2', '../images/InnerColumn_images/l2.png', 'Telephoto Zoom', 'RF70-200mm F4 L IS USM',
   'mic2', '../images/InnerColumn_images/mic2.png', 'Microphone', 'Stereo Microphone DME100', 'sony');
 
@@ -128,24 +134,29 @@ new Content('8400','sony 2','sony2', '../images/InnerColumn_images/canon2.png', 
 
 
 //====================================== Random Number Generator Function====================
-function generateRandomIndexNumber() {
-  let rand = Math.floor(Math.random() * Content.contentArray.length);
-  return rand;
+function generateRandomIndexNumberCanon() {
+  let rand1 = Math.floor(Math.floor(Math.random()*2));
+  return rand1;
+}
+
+function generateRandomIndexNumberSony() {
+  let rand2 = Math.floor(Math.random()*2)+2;
+  return rand2;
 }
 //========================= Render Function ================
 function renderContent() {
   //=======0        1            2          3
   while ((pack1 === pack2 || pack3 === pack4 || pack1 === pack3 || pack1 === pack4 || pack2 === pack3 || pack2 === pack4)) {
 
-    pack1 = generateRandomIndexNumber();
-    pack2 = generateRandomIndexNumber();
-    pack3 = generateRandomIndexNumber();
-    pack4 = generateRandomIndexNumber();
+    pack1 = generateRandomIndexNumberCanon();
+    pack2 = generateRandomIndexNumberCanon();
+    pack3 = generateRandomIndexNumberSony();
+    pack4 = generateRandomIndexNumberSony();
 
-    console.log(pack1, pack2, pack3, pack4)
+    //console.log(pack1, pack2, pack3, pack4)
   }
+
   console.log(Content.contentArray[0].brand);
-  if (Content.contentArray[0].brand === 'canon') {
     console.log(Content.contentArray);
     console.log(Content.contentArray[pack3].cameraDescription);
     //=========================================================================== First Case Canon==================
@@ -165,8 +176,9 @@ function renderContent() {
     contentTitle2.innerHTML = Content.contentArray[pack1].lensTitle;
     contentTitle3.innerHTML = Content.contentArray[pack1].micTitle;
 
-    p1.innerHTML=Content.contentArray[pack1].packagePrice;
-  
+    p1.innerHTML = Content.contentArray[pack1].packagePrice;
+
+
 
     //=========================================================================== Second Case Canon ==================
     leftImage.src = Content.contentArray[pack2].camerSource;
@@ -186,11 +198,11 @@ function renderContent() {
     contentTitle2.innerHTML = Content.contentArray[pack2].lensTitle;
     contentTitle3.innerHTML = Content.contentArray[pack2].micTitle;
 
-    p1.innerHTML=Content.contentArray[pack2].packagePrice;
-    
+    p1.innerHTML = Content.contentArray[pack2].packagePrice;
 
-  }
-  if (Content.contentArray[2].brand === 'sony') {
+
+  
+  
     //=========================================================================== First Case Sony ==================
     leftImageSecond.src = Content.contentArray[pack3].camerSource;
     middleImageSecond.src = Content.contentArray[pack3].lensSource;
@@ -209,7 +221,7 @@ function renderContent() {
     contentTitleSecond3.innerHTML = Content.contentArray[pack3].micTitle;
 
 
-    p2.innerHTML=Content.contentArray[pack3].packagePrice;
+    p2.innerHTML = Content.contentArray[pack3].packagePrice;
 
     //=========================================================================== Second Case Sony ==================
     leftImageSecond.src = Content.contentArray[pack4].camerSource;
@@ -228,9 +240,9 @@ function renderContent() {
     contentTitleSecond2.innerHTML = Content.contentArray[pack4].lensTitle;
     contentTitleSecond3.innerHTML = Content.contentArray[pack4].micTitle;
 
-    p2.innerHTML=Content.contentArray[pack4].packagePrice;
+    p2.innerHTML = Content.contentArray[pack4].packagePrice;
   }
-}
+
 //============================================= SlideShow Code================================
 var slideIndex = 0;
 showSlides();
@@ -261,26 +273,35 @@ renderContent();
 
 function handler(event) {
 
-  if(event.target.id === 'bt1')
+  if (event.target.id === 'btn1') {
 
-  {
 
-  }else if(event.target.id === 'bt2')
-  {
+    localStorage.setItem(p1.textContent, JSON.stringify(Content.contentArray[pack1]));
+  }
+  else if (event.target.id === 'btn2') {
 
+    localStorage.setItem(p2.textContent, JSON.stringify(Content.contentArray[pack2]));
   }
 
-  else if(event.target.id === 'bt3'){
-      // from html
+  else if (event.target.id === 'btn3') {
+    p3.textContent;
+    console.log(p3.textContent);
+    // from html
   }
-  else if(event.target.id === 'bt4')
-  {
-       // from html
+  else if (event.target.id === 'btn4') {
+    // from html
+    p4.textContent;
+    console.log(p4.textContent);
   }
 
   saveInLocalStorage();
 }
+bt1.addEventListener('click', handler);
+bt2.addEventListener('click', handler);
+bt3.addEventListener('click', handler);
+bt4.addEventListener('click', handler);
 
+console.log(p1.textContent);
 
 function saveInLocalStorage() {
   const converted_Content_Array = JSON.stringify(Content.contentArray);
