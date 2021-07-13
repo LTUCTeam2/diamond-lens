@@ -12,7 +12,7 @@ function aTagTest(e) {
   console.log(e.target.classList.value);
   lsChecker(e.target.id);
 }
-function clicked(e) {}
+// function clicked(e) {}
 
 /* constr for test*/
 let Accessors = function (Name, type, modal, prices, barcode) {
@@ -25,8 +25,8 @@ let Accessors = function (Name, type, modal, prices, barcode) {
 };
 Accessors.arrayOfAccessories = [];
 
-let p = ["xx3", "lince", 9990, 600, 123456];
-let l = Accessors.arrayOfAccessories.map((x) => x);
+// let p = ["xx3", "lince", 9990, 600, 123456];
+// let l = Accessors.arrayOfAccessories.map((x) => x);
 function objMaker() {
   for (let i = 0; i < aTag.length; i++) {
     new Accessors("I" + i, "t" + i, "M" + i, 300 + i * 25 + 1234 + i * 2);

@@ -91,6 +91,8 @@ function updateCartNumbers() {
 
 let test;
 
+let constructorOfCameras = localStorage.setItem('cam', JSON.stringify(Cameras.arrayObj));
+
 function handleClick(event) {
   let numOfClicks = localStorage.getItem("inCart");
   numOfClicks = parseInt(numOfClicks);
@@ -136,3 +138,5 @@ function setLocalStorage() {
 function getFromLocal() {
   return localStorage.getItem(Cameras.arrayObj[test].Model);
 }
+
+

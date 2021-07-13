@@ -2,6 +2,20 @@
 
 //=============================== Consts ===============
 
+//=============================== buttons IDs=========
+
+const bt1 = document.getElementById("btn1");
+const bt2 = document.getElementById("btn2");
+const bt3 = document.getElementById("btn3");
+const bt4 = document.getElementById("btn4");
+
+//===== Packages ====
+
+const p1 = document.getElementById("package1");
+const p2 = document.getElementById("package2");
+const p3 = document.getElementById("package3");
+const p4 = document.getElementById("package4");
+
 //======== block 1
 const leftImage = document.getElementById("left-image");
 const middleImage = document.getElementById("middle-image");
@@ -39,8 +53,10 @@ let pack4;
 //================================= Constructor =========
 
 function Content(
-  camerName,
-  camerSource,
+  packagePrice,
+  packageName,
+  cameraName,
+  cameraSource,
   cameraTitle,
   cameraDescription,
   lensName,
@@ -53,8 +69,11 @@ function Content(
   micDescription,
   brand
 ) {
-  this.camerName = camerName;
-  this.camerSource = camerSource;
+  this.packagePrice = packagePrice;
+  this.packageName = packageName;
+
+  this.cameraName = cameraName;
+  this.cameraSource = cameraSource;
   this.cameraTitle = cameraTitle;
   this.cameraDescription = cameraDescription;
 
@@ -77,6 +96,8 @@ Content.contentArray = [];
 //========================== Created Objects =============
 
 new Content(
+  "5000",
+  "canon1",
   "canon",
   "../images/InnerColumn_images/canon.png",
   "DSLR",
@@ -93,6 +114,8 @@ new Content(
 );
 
 new Content(
+  "5300",
+  "canon2",
   "canon2",
   "../images/InnerColumn_images/canon2.png",
   "DSLR",
@@ -109,8 +132,10 @@ new Content(
 );
 
 new Content(
+  "4900",
+  "sony1",
   "sony",
-  "Battlefield™ 1.png",
+  "../images/InnerColumn_images/sony1.webp",
   "DSLR",
   "EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit",
   "l1",
@@ -125,12 +150,14 @@ new Content(
 );
 
 new Content(
+  "8400",
   "sony2",
-  "../images/InnerColumn_images/canon2.png",
+  "sony2",
+  "images/InnerColumn_images/sony2.png",
   "DSLR",
   "EOS RP RF24-105mm F4-7.1 IS STM Lens Kit",
   "l2",
-  "Battlefield™ 1.png",
+  "../images/InnerColumn_images/l2.png",
   "Telephoto Zoom",
   "RF70-200mm F4 L IS USM",
   "mic2",
@@ -140,12 +167,21 @@ new Content(
   "sony"
 );
 
+
 // console.log(Content.contentArray);
 
 //====================================== Random Number Generator Function====================
-function generateRandomIndexNumber() {
-  let rand = Math.floor(Math.random() * Content.contentArray.length);
-  return rand;
+
+// 1 2
+function generateRandomIndexNumberCanon() {
+  let rand1 = Math.floor(Math.floor(Math.random() * 2));
+  return rand1;
+}
+
+// 3 4
+function generateRandomIndexNumberSony() {
+  let rand2 = Math.floor(Math.random() * 2) + 2;
+  return rand2;
 }
 //========================= Render Function ================
 function renderContent() {
@@ -158,96 +194,103 @@ function renderContent() {
     pack2 === pack3 ||
     pack2 === pack4
   ) {
-    pack1 = generateRandomIndexNumber();
-    pack2 = generateRandomIndexNumber();
-    pack3 = generateRandomIndexNumber();
-    pack4 = generateRandomIndexNumber();
+    pack1 = generateRandomIndexNumberCanon();
+    pack2 = generateRandomIndexNumberCanon();
 
-    console.log(pack1, pack2, pack3, pack4);
+    pack3 = generateRandomIndexNumberSony();
+    pack4 = generateRandomIndexNumberSony();
+
+    //console.log(pack1, pack2, pack3, pack4)
   }
-  console.log(Content.contentArray[0].brand);
-  if (Content.contentArray[0].brand === "canon") {
-    console.log(Content.contentArray);
-    console.log(Content.contentArray[pack3].cameraDescription);
-    //=========================================================================== First Case Canon==================
-    leftImage.src = Content.contentArray[pack1].camerSource;
-    middleImage.src = Content.contentArray[pack1].lensSource;
-    rightImage.src = Content.contentArray[pack1].micSource;
 
-    leftImage.alt = Content.contentArray[pack1].camerName;
-    middleImage.alt = Content.contentArray[pack1].lensName;
-    rightImage.alt = Content.contentArray[pack1].micName;
+  // console.log(Content.contentArray[0].brand);
+  // console.log(Content.contentArray);
+  // console.log(Content.contentArray[pack3].cameraDescription);
+  //=========================================================================== First Case Canon==================
+  leftImage.src = Content.contentArray[pack1].cameraSource;
+  middleImage.src = Content.contentArray[pack1].lensSource;
+  rightImage.src = Content.contentArray[pack1].micSource;
 
-    contentDesc1.innerHTML = Content.contentArray[pack1].cameraDescription;
-    contentDesc2.innerHTML = Content.contentArray[pack1].lensDescription;
-    contentDesc3.innerHTML = Content.contentArray[pack1].micDescription;
+  leftImage.alt = Content.contentArray[pack1].cameraName;
+  middleImage.alt = Content.contentArray[pack1].lensName;
+  rightImage.alt = Content.contentArray[pack1].micName;
 
-    contentTitle1.innerHTML = Content.contentArray[pack1].cameraTitle;
-    contentTitle2.innerHTML = Content.contentArray[pack1].lensTitle;
-    contentTitle3.innerHTML = Content.contentArray[pack1].micTitle;
+  contentDesc1.innerHTML = Content.contentArray[pack1].cameraDescription;
+  contentDesc2.innerHTML = Content.contentArray[pack1].lensDescription;
+  contentDesc3.innerHTML = Content.contentArray[pack1].micDescription;
 
-    //=========================================================================== Second Case Canon ==================
-    leftImage.src = Content.contentArray[pack2].camerSource;
-    middleImage.src = Content.contentArray[pack2].lensSource;
-    rightImage.src = Content.contentArray[pack2].micSource;
+  contentTitle1.innerHTML = Content.contentArray[pack1].cameraTitle;
+  contentTitle2.innerHTML = Content.contentArray[pack1].lensTitle;
+  contentTitle3.innerHTML = Content.contentArray[pack1].micTitle;
 
-    leftImage.alt = Content.contentArray[pack2].camerName;
-    middleImage.alt = Content.contentArray[pack2].lensName;
-    rightImage.alt = Content.contentArray[pack2].micName;
+  p1.innerHTML = Content.contentArray[pack1].packagePrice;
 
-    contentDesc1.innerHTML = Content.contentArray[pack2].cameraDescription;
-    contentDesc2.innerHTML = Content.contentArray[pack2].lensDescription;
-    contentDesc3.innerHTML = Content.contentArray[pack2].micDescription;
+  //=========================================================================== Second Case Canon ==================
+  leftImage.src = Content.contentArray[pack2].cameraSource;
+  middleImage.src = Content.contentArray[pack2].lensSource;
+  rightImage.src = Content.contentArray[pack2].micSource;
 
-    contentTitle1.innerHTML = Content.contentArray[pack2].cameraTitle;
-    contentTitle2.innerHTML = Content.contentArray[pack2].lensTitle;
-    contentTitle3.innerHTML = Content.contentArray[pack2].micTitle;
-  }
-  if (Content.contentArray[2].brand === "sony") {
-    //=========================================================================== First Case Sony ==================
-    leftImageSecond.src = Content.contentArray[pack3].camerSource;
-    middleImageSecond.src = Content.contentArray[pack3].lensSource;
-    rightImageSecond.src = Content.contentArray[pack3].micSource;
+  leftImage.alt = Content.contentArray[pack2].cameraName;
+  middleImage.alt = Content.contentArray[pack2].lensName;
+  rightImage.alt = Content.contentArray[pack2].micName;
 
-    leftImageSecond.alt = Content.contentArray[pack3].camerName;
-    middleImageSecond.alt = Content.contentArray[pack3].lensName;
-    rightImageSecond.alt = Content.contentArray[pack3].micName;
+  contentDesc1.innerHTML = Content.contentArray[pack2].cameraDescription;
+  contentDesc2.innerHTML = Content.contentArray[pack2].lensDescription;
+  contentDesc3.innerHTML = Content.contentArray[pack2].micDescription;
 
-    contentDescSecond1.innerHTML =
-      Content.contentArray[pack3].cameraDescription;
-    contentDescSecond2.innerHTML = Content.contentArray[pack3].lensDescription;
-    contentDescSecond3.innerHTML = Content.contentArray[pack3].micDescription;
+  contentTitle1.innerHTML = Content.contentArray[pack2].cameraTitle;
+  contentTitle2.innerHTML = Content.contentArray[pack2].lensTitle;
+  contentTitle3.innerHTML = Content.contentArray[pack2].micTitle;
 
-    contentTitleSecond1.innerHTML = Content.contentArray[pack3].cameraTitle;
-    contentTitleSecond2.innerHTML = Content.contentArray[pack3].lensTitle;
-    contentTitleSecond3.innerHTML = Content.contentArray[pack3].micTitle;
-    //=========================================================================== Second Case Sony ==================
-    leftImageSecond.src = Content.contentArray[pack4].camerSource;
-    middleImageSecond.src = Content.contentArray[pack4].lensSource;
-    rightImageSecond.src = Content.contentArray[pack4].micSource;
+  p1.innerHTML = Content.contentArray[pack2].packagePrice;
 
-    leftImageSecond.alt = Content.contentArray[pack4].camerName;
-    middleImageSecond.alt = Content.contentArray[pack4].lensName;
-    rightImageSecond.alt = Content.contentArray[pack4].micName;
+  //=========================================================================== First Case Sony ==================
+  leftImageSecond.src = Content.contentArray[pack3].cameraSource;
+  middleImageSecond.src = Content.contentArray[pack3].lensSource;
+  rightImageSecond.src = Content.contentArray[pack3].micSource;
 
-    contentDescSecond1.innerHTML =
-      Content.contentArray[pack4].cameraDescription;
-    contentDescSecond2.innerHTML = Content.contentArray[pack4].lensDescription;
-    contentDescSecond3.innerHTML = Content.contentArray[pack4].micDescription;
+  leftImageSecond.alt = Content.contentArray[pack3].cameraName;
+  middleImageSecond.alt = Content.contentArray[pack3].lensName;
+  rightImageSecond.alt = Content.contentArray[pack3].micName;
 
-    contentTitleSecond1.innerHTML = Content.contentArray[pack4].cameraTitle;
-    contentTitleSecond2.innerHTML = Content.contentArray[pack4].lensTitle;
-    contentTitleSecond3.innerHTML = Content.contentArray[pack4].micTitle;
-  }
+  contentDescSecond1.innerHTML = Content.contentArray[pack3].cameraDescription;
+  contentDescSecond2.innerHTML = Content.contentArray[pack3].lensDescription;
+  contentDescSecond3.innerHTML = Content.contentArray[pack3].micDescription;
+
+  contentTitleSecond1.innerHTML = Content.contentArray[pack3].cameraTitle;
+  contentTitleSecond2.innerHTML = Content.contentArray[pack3].lensTitle;
+  contentTitleSecond3.innerHTML = Content.contentArray[pack3].micTitle;
+
+  p2.innerHTML = Content.contentArray[pack3].packagePrice;
+
+  //=========================================================================== Second Case Sony ==================
+  leftImageSecond.src = Content.contentArray[pack4].cameraSource;
+  middleImageSecond.src = Content.contentArray[pack4].lensSource;
+  rightImageSecond.src = Content.contentArray[pack4].micSource;
+
+  leftImageSecond.alt = Content.contentArray[pack4].cameraName;
+  middleImageSecond.alt = Content.contentArray[pack4].lensName;
+  rightImageSecond.alt = Content.contentArray[pack4].micName;
+
+  contentDescSecond1.innerHTML = Content.contentArray[pack4].cameraDescription;
+  contentDescSecond2.innerHTML = Content.contentArray[pack4].lensDescription;
+  contentDescSecond3.innerHTML = Content.contentArray[pack4].micDescription;
+
+  contentTitleSecond1.innerHTML = Content.contentArray[pack4].cameraTitle;
+  contentTitleSecond2.innerHTML = Content.contentArray[pack4].lensTitle;
+  contentTitleSecond3.innerHTML = Content.contentArray[pack4].micTitle;
+
+  p2.innerHTML = Content.contentArray[pack4].packagePrice;
 }
+
 //============================================= SlideShow Code================================
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -267,16 +310,38 @@ function showSlides() {
 // render function must be called after slider function to prevent a certain issue
 renderContent();
 
-// ===========================================================This work For Cart PLases Don't touch it======================================>>>>
-// for cart purposes
-// function to set get ls
-function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
-}
+function handler(event) {
+  if (event.target.id === "btn1") {
+    localStorage.setItem(
+      p1.textContent,
+      JSON.stringify(Content.contentArray[pack2])
+    ); // canon
+  } else if (event.target.id === "btn2") {
+    localStorage.setItem(
+      p2.textContent,
+      JSON.stringify(Content.contentArray[pack4])
+    ); // sony
+  } else if (event.target.id === "btn3") {
+    p3.textContent;
+    localStorage.setItem(p3.textContent, p3.textContent);
+    //console.log(p3.textContent);
+    // from html
+  } else if (event.target.id === "btn4") {
+    // from html
+    p4.textContent;
+    localStorage.setItem(p4.textContent, p4.textContent);
+  }
 
-// function to set set ls
-function setLocalStorage(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  saveInLocalStorage();
 }
-const spanCartCounter = document.querySelector(".spanCartCounter");
-spanCartCounter.textContent = getLocalStorage("inCart");
+bt1.addEventListener("click", handler);
+bt2.addEventListener("click", handler);
+bt3.addEventListener("click", handler);
+bt4.addEventListener("click", handler);
+
+console.log(p1.textContent);
+
+function saveInLocalStorage() {
+  const converted_Content_Array = JSON.stringify(Content.contentArray);
+  localStorage.setItem("MainPageContent", converted_Content_Array);
+}

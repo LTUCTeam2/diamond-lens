@@ -12,3 +12,6 @@ hr {
   height: 25px;
   background: url(../accessories-img/pexels-lisa-2508735.jpg);
 }
+button {
+  margin-left: 20px;
+}
