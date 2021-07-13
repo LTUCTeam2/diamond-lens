@@ -216,3 +216,15 @@ position: relative;
    margin-top: 3%;
    margin-bottom: 5%;
  }
+ /* /* ------------------------------------------------------------------------------ *
+ for rating icon/ */
+
+ #rating img{
+   width: 3%;
+   height: 4%;
+   cursor:pointer;
+ }
+ 
+ #rating img:hover ~ img {
+   opacity:50%
+ }
