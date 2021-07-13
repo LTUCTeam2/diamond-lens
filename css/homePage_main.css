@@ -80,7 +80,13 @@ height: 853px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  opacity: 0;
 }
+
+#seeDeals{
+  font-family: 'Bebas Neue', cursive;
+}
+
 .dot {
   cursor: pointer;
   height: 9px;
@@ -218,15 +224,18 @@ height: 853px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 35px;
+    font-size: 42px;
     font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
+    
   }
   #h4LastBlock{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 31px;
     font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
   }
 
  .dealsText{
