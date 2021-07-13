@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Poiret+One&display=swap");
 * {
+  box-sizing: border-box;
+  font-family: "Arima Madurai", cursive;
+
   box-sizing: border-box;
   text-transform: capitalize;
   text-align: justify;

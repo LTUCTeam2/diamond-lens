@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Poiret+One&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Arima Madurai", cursive;
 }
 body {
   width: 100%;
@@ -65,8 +67,6 @@ main {
   top: 80%;
   max-width: 300px;
   background: #777;
-
-  box-shadow: 0 35px 20px #da0037;
 
   transform: rotate(-8deg);
 }
