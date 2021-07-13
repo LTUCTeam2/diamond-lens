@@ -12,6 +12,7 @@ main {
 
 .mySlides {display: none}
 
+
 /*================================================================== slider css===============*/
 
 .hero-text2 {
@@ -112,6 +113,15 @@ height: 853px;
 }
 
 /*=============================================================================*/
+
+.total{
+  background-color:darkgrey ;
+  height: 35px;
+}
+.total p{
+  margin: 10px;
+  font-weight: bold;
+}
 
 .InnerColumn img{
    width: 160px;
