@@ -4,14 +4,20 @@
   text-align: justify;
   line-height: 25px;
 }
+main {
+  min-height: 490px;
+}
+
 .containerForCartPage {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   flex-direction: column;
+  max-width: 70px;
 }
 section {
+  height: 220px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -25,6 +31,7 @@ hr {
   height: 1px;
   background: url(../accessories-img/pexels-lisa-2508735.jpg);
 }
+
 button {
   margin-left: 20px;
 }
@@ -51,7 +58,7 @@ main h1 {
   margin: 25px auto;
 }
 main button {
-  background-color: #bb443d;
+  background-color: #da0037;
   border: none;
   color: white;
   text-align: center;
@@ -65,4 +72,12 @@ main button {
 }
 main button :hover {
   opacity: 0.8;
+}
+.st {
+  position: relative;
+  left: -104px;
+  margin: 50px -165px;
+}
+.model {
+  width: 279%;
 }

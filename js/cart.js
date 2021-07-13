@@ -13,9 +13,9 @@ function setLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 let arrayOfLocalStorage = [];
-let spanCartCounter = document.querySelector(".spanCartCounter");
 const main = document.querySelector("#main");
 
+let spanCartCounter = document.querySelector(".spanCartCounter");
 spanCartCounter.textContent = getLocalStorage("inCart");
 
 const constructorFromAccessJsFile = getLocalStorage("acces");
@@ -33,18 +33,26 @@ function remove(id, model) {
   deleteButton.addEventListener("click", (e) => {
     console.log(hr);
     localStorage.removeItem(model);
-    sec.remove();
-    hr.remove();
+    console.log(`.${e.target.classList[0]}`);
+    console.log(
+      document.querySelector(`.${e.target.classList[0]}div:nth-child(5)`)
+    );
     let priceThatGotRendered = document.querySelector(
       `.${e.target.classList[0]} div:nth-child(5)`
     ).textContent;
+    let qun = document.querySelector(
+      `.${e.target.classList[0]} div:nth-child(4)`
+    ).textContent;
+    sec.remove();
+    hr.remove();
+    console.log(priceThatGotRendered);
     addForPrices = Number.parseInt(priceThatGotRendered);
     del = del - addForPrices;
 
     document.getElementById("sectionForTotal").remove();
     renderForTotal(Math.trunc(del));
     let incart = getLocalStorage("inCart");
-    setLocalStorage("inCart", --incart);
+    setLocalStorage("inCart", incart - Number.parseInt(qun));
     console.log(spanCartCounter);
     spanCartCounter.textContent = getLocalStorage("inCart");
 

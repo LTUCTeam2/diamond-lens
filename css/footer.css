@@ -1,48 +1,38 @@
 
   
 footer {
-  
+ 
   position: relative;
     /* position: absolute; */
-    height: 180px;
-    background-color: rgb(236 236 236);
-    border-top: solid 1px rgb(194, 0, 0);
+    height: 150px;
+    background-color: #444444;
+    
 
     /* bottom: -1200px; */
 
 
     width: 100%;
-    color: black
+    color: #444444 ; 
 }
+
 
 
 
   footer #copyRights {
-      font-weight: bolder;
-      font-size: 25px;
-      color: rgb(124, 64, 64);
-      position: absolute;
-      right: 135px;
-      bottom: 30px;
-      font-family: 'Bebas Neue', cursive;
+    
+    font-size: 25px;
+    color: #DA0037;
+    position: absolute;
+    right: 702px;
+    bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
 
   }
 
-footer h2 {
-  font-weight: bolder;
-  color: rgb(124, 64, 64);
-  position: absolute;
-    font-size: 25px;
-    left: 7px;
-    font-family: 'Bebas Neue', cursive;
 
-}
-footer #para {
-  position: absolute;
-  top: 25px;
-left: 7px;
-    font-size: 20px;
-}
+
+
+
 
 footer nav ul li a {
     text-decoration: none;
@@ -52,36 +42,44 @@ footer nav ul li a {
 }
 
 footer nav ul {
-  margin-left: 50px;
+  margin-top: 5px;
   font-family: 'Bebas Neue', cursive;
+  
 }
 
-
+footer h2 {
+  color: #DA0037;
+  position: absolute;
+  font-size: 30px;
+  right: 164px;
+  font-family: 'Bebas Neue', cursive;
+  top: 30px;
+}
 
 
 #camerasList{
     position: absolute;
-    top: 70px;
-    left: 100px;
+    top: 15px;
+    left: 50px;
     
 }
 #camerasList h4 {
   font-weight: bolder;
     font-size: 21px;
-    color: rgb(124, 64, 64);
+    color: #DA0037;
     font-family: 'Bebas Neue', cursive;
 }
 
 #AccessoriesList{
-  color: rgb(124, 64, 64);
+  color: #DA0037;
   position: absolute;
-  top: 120px;
-  left: 100px;
+  top: 65px;
+  left: 50px;
 }
 #AccessoriesList h4 {
   font-weight: bolder;
   font-size: 21px;
-  color: rgb(124, 64, 64);
+  color: #DA0037;
   font-family: 'Bebas Neue', cursive;
     
 }
@@ -89,15 +87,20 @@ footer nav ul {
 footer nav ul li {
 display: inline-block;
 margin-left: 15px;
+color: #171717;
+}
+
+footer nav ul li a{
+  color: #171717;
 }
 
 footer nav ul li a:hover{
-  color: rgb(124, 64, 64);
+  color: #DA0037;
 }
 footer nav ul li:hover{
 transform: scale(1.1);
-  transition-duration: 0.3s;
-  border-bottom: 1.5px solid rgb(124, 64, 64);
+  transition-duration: 0.05s;
+  border-bottom: 1.5px solid #DA0037;
 }
 
 /* #AccessoriesList{
@@ -121,41 +124,41 @@ transform: scale(1.1);
 
   
   .fa:hover {
-      background-color: rgb(124, 64, 64);
-      color: grey;
+      background-color: #EDEDED;
+      color: #DA0037;
   }
   
   .fa-facebook {
-    background: #6d6d6d;
-    color: rgb(124, 64, 64);
+    background: #171717;
+    color: #DA0037;
   }
   
   .fa-twitter {
-    background: #6d6d6d;
-    color: rgb(124, 64, 64);
+    background: #171717;
+    color: #DA0037;
   }
   
   .fa-google {
-    background: #6d6d6d;
-    color: rgb(124, 64, 64);
+    background: #171717;
+    color: #DA0037;
   }
   
   .fa-linkedin {
-    background: #6d6d6d;
-    color: rgb(124, 64, 64);
+    background: #171717;
+    color: #DA0037;
   }
   
   .fa-youtube {
-    background: #6d6d6d;
-    color: rgb(124, 64, 64);
+    background: #171717;
+    color: #DA0037;
   }
   
 
 
   #social {
-      position: absolute;
-      right: 0px;
-      bottom: 70px;
-      width: 400px;
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    width: 400px;
       
   }

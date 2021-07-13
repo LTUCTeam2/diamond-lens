@@ -167,7 +167,6 @@ new Content(
   "sony"
 );
 
-
 // console.log(Content.contentArray);
 
 //====================================== Random Number Generator Function====================
@@ -316,20 +315,76 @@ function handler(event) {
       p1.textContent,
       JSON.stringify(Content.contentArray[pack2])
     ); // canon
+    if (localStorage.getItem("inCart") !== null) {
+      let spanCartCounter = document.querySelector(".spanCartCounter");
+      localStorage.setItem(
+        "inCart",
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+      spanCartCounter.textContent = localStorage.getItem("inCart");
+    } else {
+      localStorage.setItem("inCart", 1);
+      spanCartCounter.textContent = Number.parseInt(
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+    }
   } else if (event.target.id === "btn2") {
     localStorage.setItem(
       p2.textContent,
       JSON.stringify(Content.contentArray[pack4])
     ); // sony
+    if (localStorage.getItem("inCart") !== null) {
+      let spanCartCounter = document.querySelector(".spanCartCounter");
+      localStorage.setItem(
+        "inCart",
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+
+      spanCartCounter.textContent = Number.parseInt(
+        localStorage.getItem("inCart")
+      );
+    } else {
+      localStorage.setItem("inCart", 1);
+      spanCartCounter.textContent = Number.parseInt(
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+    }
   } else if (event.target.id === "btn3") {
     p3.textContent;
     localStorage.setItem(p3.textContent, p3.textContent);
+    if (localStorage.getItem("inCart") !== null) {
+      let spanCartCounter = document.querySelector(".spanCartCounter");
+      localStorage.setItem(
+        "inCart",
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+      spanCartCounter.textContent = Number.parseInt(
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+    } else {
+      localStorage.setItem("inCart", 1);
+      spanCartCounter.textContent = Number.parseInt(
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+    }
     //console.log(p3.textContent);
     // from html
   } else if (event.target.id === "btn4") {
     // from html
     p4.textContent;
     localStorage.setItem(p4.textContent, p4.textContent);
+    if (localStorage.getItem("inCart") === null) {
+      let spanCartCounter = document.querySelector(".spanCartCounter");
+      localStorage.setItem(
+        "inCart",
+        Number.parseInt(localStorage.getItem("inCart"))
+      );
+      spanCartCounter.textContent = Number.parseInt(
+        localStorage.getItem("inCart")
+      );
+    } else {
+      localStorage.setItem("inCart", 1);
+    }
   }
 
   saveInLocalStorage();
@@ -345,3 +400,5 @@ function saveInLocalStorage() {
   const converted_Content_Array = JSON.stringify(Content.contentArray);
   localStorage.setItem("MainPageContent", converted_Content_Array);
 }
+let spanCartCounter = document.querySelector(".spanCartCounter");
+spanCartCounter.textContent = localStorage.getItem("inCart");
