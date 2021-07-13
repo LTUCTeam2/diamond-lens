@@ -13,25 +13,50 @@ function setLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 let arrayOfLocalStorage = [];
-const spanCartCounter = document.querySelector(".spanCartCounter");
 const main = document.querySelector("#main");
 
+let spanCartCounter = document.querySelector(".spanCartCounter");
 spanCartCounter.textContent = getLocalStorage("inCart");
 
 const constructorFromAccessJsFile = getLocalStorage("acces");
 // ======== remove button
+let del = 0;
 function remove(id, model) {
   let deleteButton = document.createElement("Button");
   deleteButton.setAttribute("class", id);
   let sec = document.querySelector(`.${id}`);
+  let hr = document.querySelector(`.${id}+hr`);
   sec.appendChild(deleteButton);
   deleteButton.textContent = "X";
-  deleteButton.addEventListener("click", () => {
-    // main.removeChild(sec);
-    sec.remove();
+  let addForPrices = 0;
+  del = totalSection();
+  deleteButton.addEventListener("click", (e) => {
+    console.log(hr);
     localStorage.removeItem(model);
+    console.log(`.${e.target.classList[0]}`);
+    console.log(
+      document.querySelector(`.${e.target.classList[0]}div:nth-child(5)`)
+    );
+    let priceThatGotRendered = document.querySelector(
+      `.${e.target.classList[0]} div:nth-child(5)`
+    ).textContent;
+    let qun = document.querySelector(
+      `.${e.target.classList[0]} div:nth-child(4)`
+    ).textContent;
+    sec.remove();
+    hr.remove();
+    console.log(priceThatGotRendered);
+    addForPrices = Number.parseInt(priceThatGotRendered);
+    del = del - addForPrices;
 
-      // sec.style.display = "none";
+    document.getElementById("sectionForTotal").remove();
+    renderForTotal(Math.trunc(del));
+    let incart = getLocalStorage("inCart");
+    setLocalStorage("inCart", incart - Number.parseInt(qun));
+    console.log(spanCartCounter);
+    spanCartCounter.textContent = getLocalStorage("inCart");
+
+    // sec.style.display = "none";
   });
 }
 //  end of remove button
@@ -39,7 +64,7 @@ function remove(id, model) {
 
 let accessQmultiplyPArray = [];
 let accessQmultiplyP;
-
+console.log();
 let test = [];
 let counter = 0;
 function cartKeysChecker() {
@@ -61,22 +86,30 @@ function cartKeysChecker() {
         accessQmultiplyPArray.push(accessQmultiplyP);
 
         let section = document.createElement("section");
-        section.setAttribute("class", `${arrayOfLocalStorage[i].model}`);
+        section.setAttribute("class", `${arrayOfLocalStorage[i].Name}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
+
         main.appendChild(section);
-        remove(`${arrayOfLocalStorage[i].model}`, arrayOfLocalStorage[i].Name);
 
         for (let j = 0; j < test.length; j++) {
           let a = document.createElement("div");
           a.setAttribute("class", "containerForCartPage a");
           section.appendChild(a);
           containerForCartPage = document.querySelectorAll(".a");
-          // console.log(containerForCartPage[counter]);
-
-          containerForCartPage[counter].textContent = test[j];
+          if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+            img.src = arrayOfLocalStorage[i].img;
+            a.appendChild(img);
+            containerForCartPage[counter].textContent = test[j];
+            console.log(a.appendChild(img));
+          } else {
+            containerForCartPage[counter].textContent = test[j];
+          }
           counter++;
         }
+        main.appendChild(hr);
+        remove(`${arrayOfLocalStorage[i].Name}`, arrayOfLocalStorage[i].Name);
       }
     }
   }
@@ -108,35 +141,29 @@ function camRender() {
         let camSection = document.createElement("section");
         camSection.setAttribute("class", `${cam[i].Name}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
         main.appendChild(camSection);
-        remove(`${cam[i].Name}`, cam[i].Model);
         for (let j = 0; j < abcArray.length; j++) {
           let camDiv = document.createElement("div");
           camDiv.setAttribute("class", "containerForCartPage a");
           camSection.appendChild(camDiv);
           containerForCartPage = document.querySelectorAll(".a");
-          containerForCartPage[counter].textContent = abcArray[j];
+          if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+            img.src = cam[i].Img;
+            containerForCartPage[counter].textContent = abcArray[j];
+            camDiv.appendChild(img);
+          } else {
+            containerForCartPage[counter].textContent = abcArray[j];
+          }
           counter++;
         }
-        // console.log(i);
-
-        // console.log(abc);
+        main.appendChild(hr);
+        remove(`${cam[i].Name}`, cam[i].Model);
       }
-
-      // console.log(getLocalStorage(cam[i].Model));
-      // console.log(getLocalStorage(cam[i].Model) !== null);
     }
   }
 }
-console.log('Camera Total Array', camQmultiplyPArray);
-
-
-camQmultiplyP = camQmultiplyPArray.reduce(add, 0);
-accessQmultiplyP = accessQmultiplyPArray.reduce(add2, 0);
-let sumCamandAccess = camQmultiplyP + accessQmultiplyP;
-
-
 
 function add(accumulator, a) {
   return accumulator + a;
@@ -149,19 +176,17 @@ function totalSection() {
   accessQmultiplyP = accessQmultiplyPArray.reduce(add, 0);
 
   let red = addForArrays(mainQmultiplyPArray);
+  let red2 = addForArrays(fixedQmultiplyPArray);
 
-
-function totalSection() {
-  let sectionForTotal = document.createElement('section');
-  sectionForTotal.setAttribute('id', 'sectionForTotal');
-
-  
+  let sumCamandAccess = camQmultiplyP + accessQmultiplyP + red + red2;
+  return sumCamandAccess;
+}
+function renderForTotal(sumCamandAccess) {
+  let sectionForTotal = document.createElement("section");
+  sectionForTotal.setAttribute("id", "sectionForTotal");
   main.appendChild(sectionForTotal);
   sectionForTotal.textContent = `Total Price: ${sumCamandAccess}`;
 }
-
-
-
 
 function addForArrays(array) {
   let addVar = 0;
@@ -170,7 +195,6 @@ function addForArrays(array) {
   }
   return addVar;
 }
-
 
 // let totalPriceCamAndAccess = 0;
 // for (let i = 0; i < camQmultiplyPArray.length; i++) {
@@ -191,8 +215,7 @@ let mainArray = [];
 let arrayOfProperty = [];
 let arrayOfPropertyNames = [];
 
-console.log(mainArray);
-console.log("lastArra", arrayOfProperty);
+console.log(mainConstructor);
 function cartKeysForMAinPage() {
   if (mainConstructor !== null) {
     for (let i = 0; i < mainConstructor.length; i++) {
@@ -203,6 +226,7 @@ function cartKeysForMAinPage() {
         arrayOfPropertyNames = [];
         // ================================================================
         arrayOfProperty.push(mainArray.packageName);
+        arrayOfProperty.push("");
         arrayOfProperty.push(mainArray.packagePrice);
         arrayOfProperty.push(1);
         arrayOfProperty.push(Number.parseInt(mainArray.packagePrice));
@@ -216,9 +240,8 @@ function cartKeysForMAinPage() {
         let section = document.createElement("section");
         section.setAttribute("class", `n${mainArray.packagePrice}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
+
         main.appendChild(section);
-        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
 
         for (let j = 0; j < 5; j++) {
           let a = document.createElement("div");
@@ -228,18 +251,40 @@ function cartKeysForMAinPage() {
           if (j === 1) {
             a.setAttribute("id", mainConstructor[i].packageName);
             divsMaker(mainConstructor[i].packageName, arrayOfPropertyNames);
+          } else if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+
+            console.log(Number.parseInt(mainArray.packagePrice) === 5000);
+            if (Number.parseInt(mainArray.packagePrice) === 5000) {
+              img.src = `../cartimg/c5000.PNG`;
+            } else if (Number.parseInt(mainArray.packagePrice) === 4900) {
+              img.src = "../cartimg/s4900.PNG";
+              console.log("../cartimg/c5000.PNG");
+            } else if (Number.parseInt(mainArray.packagePrice) === 5300) {
+              img.src = "../cartimg/c5000.PNG";
+              console.log("../cartimg/c5000.PNG");
+            } else if (Number.parseInt(mainArray.packagePrice) === 8400) {
+              img.src = `../cartimg/s8400.PNG`;
+              console.log("../cartimg/c5000.PNG");
+            }
+
+            containerForCartPage[counter].textContent = arrayOfProperty[j];
+            a.appendChild(img);
           } else {
             containerForCartPage[counter].textContent = arrayOfProperty[j];
           }
 
           counter++;
         }
+        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
+        main.appendChild(hr);
       }
     }
   }
 }
-let arrayForFix = ["Red Pack", 40000, 1, 40000];
-let arrayForFix2 = ["nikon Pack", 20000, 1, 20000];
+let arrayForFix = ["Red Pack", "", 40000, 1, 40000];
+let arrayForFix2 = ["nikon Pack", "", 20000, 1, 20000];
 let arrayForFixModel1 = [
   `MONSTRO 8K VV`,
   `DSMC2 ULTRA-BRITE`,
@@ -260,7 +305,7 @@ function fixedPacks() {
       fixedSection.setAttribute("id", "sectionForFixed");
       main.appendChild(fixedSection);
       fixedQmultiplyPArray.push(Number.parseInt(fixed));
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < arrayForFix.length; i++) {
         let camDiv = document.createElement("div");
         camDiv.setAttribute("class", "containerForCartPage a");
         fixedSection.appendChild(camDiv);
@@ -268,14 +313,22 @@ function fixedPacks() {
         if (i === 1) {
           camDiv.setAttribute("id", `redPack`);
           divsMaker(`redPack`, arrayForFixModel1);
+        } else if (i === 0) {
+          let img = document.createElement("img");
+          img.setAttribute("class", "img");
+
+          img.src = `../cartimg/redPack.PNG`;
+
+          containerForCartPage[counter].textContent = arrayForFix[i];
+          camDiv.appendChild(img);
         } else {
           containerForCartPage[counter].textContent = arrayForFix[i];
         }
         counter++;
       }
       let hr = document.createElement("hr");
-      main.appendChild(hr);
       main.appendChild(fixedSection);
+      main.appendChild(hr);
       fixedSection.setAttribute("class", "sectionForFixedcls");
 
       remove(`sectionForFixedcls`, fixed);
@@ -286,7 +339,7 @@ function fixedPacks() {
     fixedSection.setAttribute("id", "sectionForFixed2");
     main.appendChild(fixedSection);
     fixedQmultiplyPArray.push(Number.parseInt(fixed2));
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < arrayForFix2.length; i++) {
       let camDiv = document.createElement("div");
       camDiv.setAttribute("class", "containerForCartPage a");
       fixedSection.appendChild(camDiv);
@@ -294,6 +347,12 @@ function fixedPacks() {
       if (i === 1) {
         camDiv.setAttribute("id", `nikonPack`);
         divsMaker(`nikonPack`, arrayForFixModel2);
+      } else if (i === 0) {
+        let img = document.createElement("img");
+        img.setAttribute("class", "img");
+        img.src = `../cartimg/nikonPack.PNG`;
+        containerForCartPage[counter].textContent = arrayForFix2[i];
+        camDiv.appendChild(img);
       } else {
         containerForCartPage[counter].textContent = arrayForFix2[i];
       }
@@ -301,8 +360,8 @@ function fixedPacks() {
     }
 
     let hr = document.createElement("hr");
-    main.appendChild(hr);
     main.appendChild(fixedSection);
+    main.appendChild(hr);
     fixedSection.setAttribute("class", "sectionForFixed2cls");
     remove(`sectionForFixed2cls`, fixed2);
   }
@@ -321,4 +380,4 @@ function divsMaker(id, arrayOfPropertyNames) {
     divsForPacks.textContent = arrayOfPropertyNames[i];
   }
 }
-totalSection();
+renderForTotal(totalSection());
