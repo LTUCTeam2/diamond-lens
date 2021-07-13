@@ -136,18 +136,12 @@ function add(accumulator, a) {
 let mainQmultiplyPArray = [];
 let fixedQmultiplyPArray = [];
 function totalSection() {
-  console.log(mainQmultiplyPArray);
-  console.log(fixedQmultiplyPArray);
   camQmultiplyP = camQmultiplyPArray.reduce(add, 0);
-
   accessQmultiplyP = accessQmultiplyPArray.reduce(add, 0);
-  console.log("cam", camQmultiplyP);
-  console.log("access", accessQmultiplyP);
+
   let red = addForArrays(mainQmultiplyPArray);
 
   let red2 = addForArrays(fixedQmultiplyPArray);
-  console.log("main", mainQmultiplyPArray);
-  console.log("fixed", red2);
   let sumCamandAccess = camQmultiplyP + accessQmultiplyP + red + red2;
   console.log(red);
   console.log(red + red2);
