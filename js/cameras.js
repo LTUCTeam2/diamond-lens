@@ -1,6 +1,6 @@
 "use strict";
 
-function Cameras(Name, Model, Price,Img) {
+function Cameras(Name, Model, Price, Img) {
   this.Name = Name;
   this.Model = Model;
   this.Price = Price;
@@ -71,10 +71,9 @@ let priceArray = [
 
 let myButton = document.getElementsByTagName("button");
 
-
 //making objects using for loop:
 for (let i = 0; i < myButton.length; i++) {
-  let imgLinks = document.querySelectorAll('.camImage')[i].src
+  let imgLinks = document.querySelectorAll(".camImage")[i].src;
   new Cameras(nameArray[i], modelArray[i], priceArray[i], imgLinks);
   myButton[i].setAttribute("id", modelArray[i]);
   myButton[i].addEventListener("click", handleClick);
@@ -95,10 +94,12 @@ function updateCartNumbers() {
   }
 }
 
-
 let test;
 
-let constructorOfCameras = localStorage.setItem('cam', JSON.stringify(Cameras.arrayObj));
+let constructorOfCameras = localStorage.setItem(
+  "cam",
+  JSON.stringify(Cameras.arrayObj)
+);
 
 function handleClick(event) {
   let numOfClicks = localStorage.getItem("inCart");
@@ -128,9 +129,6 @@ updateCartNumbers();
 
 // Cameras.prototype.inCart = 0;
 
-
-
-
 console.log(Cameras.arrayObj);
 
 function setLocalStorage() {
@@ -139,27 +137,20 @@ function setLocalStorage() {
     let newModel = JSON.stringify(Cameras.arrayObj[test]);
     newModel = localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
     // let newImage = localStorage.setItem(Cameras.arrayObj[test].Img, newModel);
-
   } else {
     Cameras.arrayObj[test].inCart++;
     let newModel = JSON.stringify(Cameras.arrayObj[test]);
     newModel = localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
     let newImage = localStorage.setItem(Cameras.arrayObj[test].Img, newModel);
-
   }
 }
 
-
-
 function getFromLocal() {
-  return  localStorage.getItem(Cameras.arrayObj[test].Model);
-
+  return localStorage.getItem(Cameras.arrayObj[test].Model);
 }
-
 // localStorage.getItem(Cameras.arrayObj[test].Img);
-Cameras.prototype.newimagefortest = 'hi';
+// Cameras.prototype.newimagefortest = "hi";
 
 // console.log(Cameras.Img);
 // console.log(Cameras.Img[0]);
 // console.log(Cameras.Img[i].ImageforCam);
-

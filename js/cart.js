@@ -356,7 +356,7 @@ function fixedPacks() {
 
 fixedPacks();
 cartKeysForMAinPage();
-// camRender();
+camRender();
 cartKeysChecker();
 function divsMaker(id, arrayOfPropertyNames) {
   for (let i = 0; i < arrayOfPropertyNames.length; i++) {
