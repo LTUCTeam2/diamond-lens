@@ -1,8 +1,19 @@
+
+body {
+  background-color: #f8f4f494;
+}
+
 header {
-  z-index: 2;
+  
+  width: 100%;
+  height: 106px;
+  box-sizing: border-box;
+  background-color: rgb(236 236 236);
+  border-bottom: solid 1px rgb(194, 0, 0);
   position: relative;
-  background-color: black;
-  height: 80px;
+  margin: 0;
+  z-index: 9999998;
+
 }
 .spanCartCounter {
   color: #eee;
@@ -17,64 +28,73 @@ header #logiImage {
   top: 10px;
 }
 
-header h1 {
+header pre {
   position: absolute;
-  left: 105px;
-  top: 20px;
-  font-size: 35px;
+  left: 90px;
+  top: 10px;
+  font-size: 43px;
   color: rgb(124, 64, 64);
+  font-family: 'Otomanopee One', sans-serif;
 }
 
 header nav ul li {
   display: inline-block;
-  margin-right: 45px;
-  font-size: 27px;
+  margin-right: 69px;
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: 'Bebas Neue', cursive;
 }
 header nav ul li:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
+  transition-duration: 0.2s;
 }
 header nav ul li a {
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
 header nav ul li a:hover {
-  color: rgb(233, 130, 130);
+  color: rgb(146, 74, 74);
 
-  border-bottom: 2px solid rgb(197, 197, 143);
+
+  border-bottom: 3px solid rgb(124, 64, 64);
+  transition-duration: 1s;
 }
 
 header nav ul {
   position: absolute;
   left: 400px;
-  top: 25px;
+  top: 58px;
+  
 }
 
 #CartImage {
   width: 40px;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  border-radius: 40%;
-  background-color: rgb(177, 165, 165);
+  right: 15px;
+  top: 46px;;
 }
 #CartImage:hover {
-  border: 2px solid rgb(110, 23, 23);
-  background-color: rgb(209, 106, 106);
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  border-bottom: 1.5px solid rgb(124, 64, 64);
 }
 #searchImage {
-  width: 40px;
+    
+  width: 39px;
   position: absolute;
   right: 70px;
-  top: 10px;
-  border-radius: 40%;
+  top: 46px;
+  
+  
   padding: 0px;
-  background-color: grey;
+  
 }
 
 #searchImage:hover {
-  border: 2px solid rgb(110, 23, 23);
-  background-color: rgb(209, 106, 106);
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  border-bottom: 1.5px solid rgb(124, 64, 64);
 }
 
 /* dropdown */
@@ -90,6 +110,8 @@ li.dropdown {
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  left: 47px;
+  
 }
 
 .dropdown-content a {

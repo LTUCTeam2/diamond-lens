@@ -9,17 +9,31 @@ body {
   /* background-image: url(../storyImages/the-nigmatic-YefEvN5CDLY-unsplash.jpg); */
 }
 
+
+
 #storyPara{
-    text-align: center;
-    font-size: 30px;
-    background-color: rgb(80, 51, 51);
-    color: rgb(247, 184, 67);
+  text-align: center;
+  font-size: 35px;
+  background-color: rgb(141 135 135);
+  color: rgb(124, 64, 64);
+  font-family: 'Bebas Neue', cursive;
+  padding: 5px;;
 }
 #storybackImage{
     position: absolute;
     width: 100%;
     height: 190%;
     
+}
+
+main div div div h2 {
+  color: rgb(124, 64, 64);
+  font-size: larger;
+  font-weight: bolder;
+}
+
+main div div div p {
+  margin: 3px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -57,7 +71,7 @@ body {
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #FF9F55;
+  border: 4px solid rgb(124, 64, 64);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
