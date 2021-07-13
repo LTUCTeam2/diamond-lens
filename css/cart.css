@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-align: justify;
+  line-height: 25px;
+}
 .containerForCartPage {
   display: flex;
   flex-direction: row;
@@ -34,6 +40,7 @@ button {
   margin-right: 356px;
 }
 main {
+  background-color: #dedede;
   display: flex;
   flex-direction: column;
   align-content: stretch;

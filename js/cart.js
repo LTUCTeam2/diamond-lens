@@ -25,18 +25,22 @@ function remove(id, model) {
   let deleteButton = document.createElement("Button");
   deleteButton.setAttribute("class", id);
   let sec = document.querySelector(`.${id}`);
+  let hr = document.querySelector(`.${id}+hr`);
   sec.appendChild(deleteButton);
   deleteButton.textContent = "X";
   let addForPrices = 0;
   del = totalSection();
   deleteButton.addEventListener("click", (e) => {
+    console.log(hr);
+    localStorage.removeItem(model);
+    sec.remove();
+    hr.remove();
     let priceThatGotRendered = document.querySelector(
       `.${e.target.classList[0]} div:nth-child(5)`
     ).textContent;
     addForPrices = Number.parseInt(priceThatGotRendered);
     del = del - addForPrices;
-    sec.remove();
-    localStorage.removeItem(model);
+
     document.getElementById("sectionForTotal").remove();
     renderForTotal(Math.trunc(del));
     let incart = getLocalStorage("inCart");
@@ -74,9 +78,9 @@ function cartKeysChecker() {
         accessQmultiplyPArray.push(accessQmultiplyP);
 
         let section = document.createElement("section");
-        section.setAttribute("class", `${arrayOfLocalStorage[i].model}`);
+        section.setAttribute("class", `${arrayOfLocalStorage[i].Name}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
+
         main.appendChild(section);
 
         for (let j = 0; j < test.length; j++) {
@@ -96,7 +100,8 @@ function cartKeysChecker() {
           }
           counter++;
         }
-        remove(`${arrayOfLocalStorage[i].model}`, arrayOfLocalStorage[i].Name);
+        main.appendChild(hr);
+        remove(`${arrayOfLocalStorage[i].Name}`, arrayOfLocalStorage[i].Name);
       }
     }
   }
@@ -128,7 +133,6 @@ function camRender() {
         let camSection = document.createElement("section");
         camSection.setAttribute("class", `${cam[i].Name}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
         main.appendChild(camSection);
         for (let j = 0; j < abcArray.length; j++) {
           let camDiv = document.createElement("div");
@@ -138,14 +142,15 @@ function camRender() {
           if (j === 0) {
             let img = document.createElement("img");
             img.setAttribute("class", "img");
-            img.src = arrayOfLocalStorage[i].img;
+            img.src = cam[i].Img;
+            containerForCartPage[counter].textContent = abcArray[j];
             camDiv.appendChild(img);
-            camDiv[counter].textContent = abcArray[j];
           } else {
             containerForCartPage[counter].textContent = abcArray[j];
           }
           counter++;
         }
+        main.appendChild(hr);
         remove(`${cam[i].Name}`, cam[i].Model);
       }
     }
@@ -212,7 +217,6 @@ function cartKeysForMAinPage() {
         arrayOfProperty = [];
         arrayOfPropertyNames = [];
         // ================================================================
-        arrayOfPropertyNames.push(mainArray.packageName);
         arrayOfProperty.push(mainArray.packageName);
         arrayOfProperty.push("");
         arrayOfProperty.push(mainArray.packagePrice);
@@ -228,7 +232,7 @@ function cartKeysForMAinPage() {
         let section = document.createElement("section");
         section.setAttribute("class", `n${mainArray.packagePrice}`);
         let hr = document.createElement("hr");
-        main.appendChild(hr);
+
         main.appendChild(section);
 
         for (let j = 0; j < 5; j++) {
@@ -266,6 +270,7 @@ function cartKeysForMAinPage() {
           counter++;
         }
         remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
+        main.appendChild(hr);
       }
     }
   }
@@ -314,8 +319,8 @@ function fixedPacks() {
         counter++;
       }
       let hr = document.createElement("hr");
-      main.appendChild(hr);
       main.appendChild(fixedSection);
+      main.appendChild(hr);
       fixedSection.setAttribute("class", "sectionForFixedcls");
 
       remove(`sectionForFixedcls`, fixed);
@@ -347,8 +352,8 @@ function fixedPacks() {
     }
 
     let hr = document.createElement("hr");
-    main.appendChild(hr);
     main.appendChild(fixedSection);
+    main.appendChild(hr);
     fixedSection.setAttribute("class", "sectionForFixed2cls");
     remove(`sectionForFixed2cls`, fixed2);
   }

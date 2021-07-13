@@ -43,9 +43,35 @@ for (let i = 0; i < document.querySelectorAll(".MidImages").length; i++) {
 Cartmaker.arrayOfObjects = [];
 console.log(arrOfImg);
 // make constructor using array that will be used in the cart every argenamt have there one array
-let arrayOfItemsName = ["sony", "red", "nicon", "canon"];
-let arrayOfItemsModel = ["x", "xx", "xxx", "xxxx"];
-let arrayOfItemsPrice = [100, 200, 300, 400];
+let arrayOfItemsName = [
+  "POLAM-FOTO",
+  "SonyLens",
+  "Neewer",
+  "SMALLRIG",
+  `ULANZIU`,
+  `Neewer `,
+  `Poyinco`,
+  `Tilta`,
+  `Olympus`,
+  `Tiffen`,
+  `Topmener`,
+  `ROCAPRAW `,
+];
+let arrayOfItemsModel = [
+  "POLAM-FOTO 140 Centimeters ",
+  `Wide Angle, Normal`,
+  "Dimensions LxWxH",
+  "Top Handle",
+  `GripPro`,
+  `Plastic 15 mm Rail Rods `,
+  `Grip Camera`,
+  `Mountings`,
+  `Lens Coating `,
+  `Filter Thread `,
+  `Flex Clamp Mount `,
+  `Action Cameras Head Mount `,
+];
+let arrayOfItemsPrice = [69, 200, 69, 150, 69, 50, 16, 17, 12, 299, 100, 89];
 let p = document.querySelectorAll(".myPrag");
 
 // using for loop to make objects

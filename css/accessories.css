@@ -4,7 +4,7 @@
 body {
   width: 100%;
   margin: 0 auto;
-  background: #ededed;
+  background: #f1f1f1;
 }
 /* big images */
 .big {
@@ -12,6 +12,7 @@ body {
   height: 70%;
 }
 main {
+  overflow-x: hidden;
   width: 100%;
 
   display: flex;
@@ -38,11 +39,12 @@ main {
 
 .divMIDContinuer {
   width: 300px;
-  box-shadow: 0 8px 8px -4px #e6adad;
+  box-shadow: 0 8px 8px -4px #da0037;
 }
-.myPrag {
+.myPrag,
+.myPrag2 {
   padding: 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .first_sec_big_img,
@@ -129,7 +131,7 @@ button:hover {
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
-  background: url(../accessories-img/pexels-lisa-2508735.jpg);
+  background: white;
   background-size: auto;
 }
 
@@ -138,7 +140,7 @@ button:hover {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #e6adad96;
+  background-color: #da0037;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -157,7 +159,10 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  width: fit-content;
+  line-height: normal;
+  color: black;
+  align-items: stretch;
 }
 .hide2 {
   display: none;
@@ -175,5 +180,11 @@ button:hover {
 }
 .small :hover {
   cursor: pointer;
-  box-shadow: 1px 0px 20px 9px #e6adad;
+  box-shadow: 1px 0px 20px 9px #da0037;
+}
+.lastIMg {
+  height: 465px;
+}
+.secImg {
+  height: 532px;
 }
