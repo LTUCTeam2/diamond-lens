@@ -167,6 +167,7 @@ new Content(
   "sony"
 );
 
+
 // console.log(Content.contentArray);
 
 //====================================== Random Number Generator Function====================
