@@ -13,23 +13,37 @@ function setLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 let arrayOfLocalStorage = [];
-const spanCartCounter = document.querySelector(".spanCartCounter");
+let spanCartCounter = document.querySelector(".spanCartCounter");
 const main = document.querySelector("#main");
 
 spanCartCounter.textContent = getLocalStorage("inCart");
 
 const constructorFromAccessJsFile = getLocalStorage("acces");
 // ======== remove button
+let del = 0;
 function remove(id, model) {
   let deleteButton = document.createElement("Button");
   deleteButton.setAttribute("class", id);
   let sec = document.querySelector(`.${id}`);
   sec.appendChild(deleteButton);
   deleteButton.textContent = "X";
-  deleteButton.addEventListener("click", () => {
-    // main.removeChild(sec);
+  let addForPrices = 0;
+  del = totalSection();
+  deleteButton.addEventListener("click", (e) => {
+    let priceThatGotRendered = document.querySelector(
+      `.${e.target.classList[0]} div:nth-child(5)`
+    ).textContent;
+    addForPrices = Number.parseInt(priceThatGotRendered);
+    del = del - addForPrices;
     sec.remove();
     localStorage.removeItem(model);
+    document.getElementById("sectionForTotal").remove();
+    renderForTotal(Math.trunc(del));
+    let incart = getLocalStorage("inCart");
+    setLocalStorage("inCart", --incart);
+    console.log(spanCartCounter);
+    spanCartCounter.textContent = getLocalStorage("inCart");
+
     // sec.style.display = "none";
   });
 }
@@ -38,7 +52,7 @@ function remove(id, model) {
 
 let accessQmultiplyPArray = [];
 let accessQmultiplyP;
-
+console.log();
 let test = [];
 let counter = 0;
 function cartKeysChecker() {
@@ -64,18 +78,25 @@ function cartKeysChecker() {
         let hr = document.createElement("hr");
         main.appendChild(hr);
         main.appendChild(section);
-        remove(`${arrayOfLocalStorage[i].model}`, arrayOfLocalStorage[i].Name);
 
         for (let j = 0; j < test.length; j++) {
           let a = document.createElement("div");
           a.setAttribute("class", "containerForCartPage a");
           section.appendChild(a);
           containerForCartPage = document.querySelectorAll(".a");
-          console.log(containerForCartPage[counter]);
-
-          containerForCartPage[counter].textContent = test[j];
+          if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+            img.src = arrayOfLocalStorage[i].img;
+            a.appendChild(img);
+            containerForCartPage[counter].textContent = test[j];
+            console.log(a.appendChild(img));
+          } else {
+            containerForCartPage[counter].textContent = test[j];
+          }
           counter++;
         }
+        remove(`${arrayOfLocalStorage[i].model}`, arrayOfLocalStorage[i].Name);
       }
     }
   }
@@ -109,22 +130,24 @@ function camRender() {
         let hr = document.createElement("hr");
         main.appendChild(hr);
         main.appendChild(camSection);
-        remove(`${cam[i].Name}`, cam[i].Model);
         for (let j = 0; j < abcArray.length; j++) {
           let camDiv = document.createElement("div");
           camDiv.setAttribute("class", "containerForCartPage a");
           camSection.appendChild(camDiv);
           containerForCartPage = document.querySelectorAll(".a");
-          containerForCartPage[counter].textContent = abcArray[j];
+          if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+            img.src = arrayOfLocalStorage[i].img;
+            camDiv.appendChild(img);
+            camDiv[counter].textContent = abcArray[j];
+          } else {
+            containerForCartPage[counter].textContent = abcArray[j];
+          }
           counter++;
         }
-        // console.log(i);
-
-        // console.log(abc);
+        remove(`${cam[i].Name}`, cam[i].Model);
       }
-
-      // console.log(getLocalStorage(cam[i].Model));
-      // console.log(getLocalStorage(cam[i].Model) !== null);
     }
   }
 }
@@ -140,11 +163,12 @@ function totalSection() {
   accessQmultiplyP = accessQmultiplyPArray.reduce(add, 0);
 
   let red = addForArrays(mainQmultiplyPArray);
-
   let red2 = addForArrays(fixedQmultiplyPArray);
+
   let sumCamandAccess = camQmultiplyP + accessQmultiplyP + red + red2;
-  console.log(red);
-  console.log(red + red2);
+  return sumCamandAccess;
+}
+function renderForTotal(sumCamandAccess) {
   let sectionForTotal = document.createElement("section");
   sectionForTotal.setAttribute("id", "sectionForTotal");
   main.appendChild(sectionForTotal);
@@ -178,8 +202,7 @@ let mainArray = [];
 let arrayOfProperty = [];
 let arrayOfPropertyNames = [];
 
-console.log(mainArray);
-console.log("lastArra", arrayOfProperty);
+console.log(mainConstructor);
 function cartKeysForMAinPage() {
   if (mainConstructor !== null) {
     for (let i = 0; i < mainConstructor.length; i++) {
@@ -189,7 +212,9 @@ function cartKeysForMAinPage() {
         arrayOfProperty = [];
         arrayOfPropertyNames = [];
         // ================================================================
+        arrayOfPropertyNames.push(mainArray.packageName);
         arrayOfProperty.push(mainArray.packageName);
+        arrayOfProperty.push("");
         arrayOfProperty.push(mainArray.packagePrice);
         arrayOfProperty.push(1);
         arrayOfProperty.push(Number.parseInt(mainArray.packagePrice));
@@ -205,7 +230,6 @@ function cartKeysForMAinPage() {
         let hr = document.createElement("hr");
         main.appendChild(hr);
         main.appendChild(section);
-        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
 
         for (let j = 0; j < 5; j++) {
           let a = document.createElement("div");
@@ -215,18 +239,39 @@ function cartKeysForMAinPage() {
           if (j === 1) {
             a.setAttribute("id", mainConstructor[i].packageName);
             divsMaker(mainConstructor[i].packageName, arrayOfPropertyNames);
+          } else if (j === 0) {
+            let img = document.createElement("img");
+            img.setAttribute("class", "img");
+
+            console.log(Number.parseInt(mainArray.packagePrice) === 5000);
+            if (Number.parseInt(mainArray.packagePrice) === 5000) {
+              img.src = `../cartimg/c5000.PNG`;
+            } else if (Number.parseInt(mainArray.packagePrice) === 4900) {
+              img.src = "../cartimg/s4900.PNG";
+              console.log("../cartimg/c5000.PNG");
+            } else if (Number.parseInt(mainArray.packagePrice) === 5300) {
+              img.src = "../cartimg/c5000.PNG";
+              console.log("../cartimg/c5000.PNG");
+            } else if (Number.parseInt(mainArray.packagePrice) === 8400) {
+              img.src = `../cartimg/s8400.PNG`;
+              console.log("../cartimg/c5000.PNG");
+            }
+
+            containerForCartPage[counter].textContent = arrayOfProperty[j];
+            a.appendChild(img);
           } else {
             containerForCartPage[counter].textContent = arrayOfProperty[j];
           }
 
           counter++;
         }
+        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
       }
     }
   }
 }
-let arrayForFix = ["Red Pack", 40000, 1, 40000];
-let arrayForFix2 = ["nikon Pack", 20000, 1, 20000];
+let arrayForFix = ["Red Pack", "", 40000, 1, 40000];
+let arrayForFix2 = ["nikon Pack", "", 20000, 1, 20000];
 let arrayForFixModel1 = [
   `MONSTRO 8K VV`,
   `DSMC2 ULTRA-BRITE`,
@@ -247,7 +292,7 @@ function fixedPacks() {
       fixedSection.setAttribute("id", "sectionForFixed");
       main.appendChild(fixedSection);
       fixedQmultiplyPArray.push(Number.parseInt(fixed));
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < arrayForFix.length; i++) {
         let camDiv = document.createElement("div");
         camDiv.setAttribute("class", "containerForCartPage a");
         fixedSection.appendChild(camDiv);
@@ -255,6 +300,14 @@ function fixedPacks() {
         if (i === 1) {
           camDiv.setAttribute("id", `redPack`);
           divsMaker(`redPack`, arrayForFixModel1);
+        } else if (i === 0) {
+          let img = document.createElement("img");
+          img.setAttribute("class", "img");
+
+          img.src = `../cartimg/redPack.PNG`;
+
+          containerForCartPage[counter].textContent = arrayForFix[i];
+          camDiv.appendChild(img);
         } else {
           containerForCartPage[counter].textContent = arrayForFix[i];
         }
@@ -273,7 +326,7 @@ function fixedPacks() {
     fixedSection.setAttribute("id", "sectionForFixed2");
     main.appendChild(fixedSection);
     fixedQmultiplyPArray.push(Number.parseInt(fixed2));
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < arrayForFix2.length; i++) {
       let camDiv = document.createElement("div");
       camDiv.setAttribute("class", "containerForCartPage a");
       fixedSection.appendChild(camDiv);
@@ -281,6 +334,12 @@ function fixedPacks() {
       if (i === 1) {
         camDiv.setAttribute("id", `nikonPack`);
         divsMaker(`nikonPack`, arrayForFixModel2);
+      } else if (i === 0) {
+        let img = document.createElement("img");
+        img.setAttribute("class", "img");
+        img.src = `../cartimg/nikonPack.PNG`;
+        containerForCartPage[counter].textContent = arrayForFix2[i];
+        camDiv.appendChild(img);
       } else {
         containerForCartPage[counter].textContent = arrayForFix2[i];
       }
@@ -297,7 +356,7 @@ function fixedPacks() {
 
 fixedPacks();
 cartKeysForMAinPage();
-camRender();
+// camRender();
 cartKeysChecker();
 function divsMaker(id, arrayOfPropertyNames) {
   for (let i = 0; i < arrayOfPropertyNames.length; i++) {
@@ -308,4 +367,4 @@ function divsMaker(id, arrayOfPropertyNames) {
     divsForPacks.textContent = arrayOfPropertyNames[i];
   }
 }
-totalSection();
+renderForTotal(totalSection());

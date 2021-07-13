@@ -29,15 +29,19 @@ function setContentForCart() {
 }
 
 // making constructor for Cart main
-let Cartmaker = function (Name, model, Price) {
+let Cartmaker = function (Name, model, Price, img) {
   this.Name = Name;
   this.model = model;
   this.Price = Price;
+  this.img = img;
   Cartmaker.arrayOfObjects.push(this);
 };
-
+let arrOfImg = [];
+for (let i = 0; i < document.querySelectorAll(".MidImages").length; i++) {
+  arrOfImg[i] = document.querySelectorAll(".MidImages")[i].src;
+}
 Cartmaker.arrayOfObjects = [];
-
+console.log(arrOfImg);
 // make constructor using array that will be used in the cart every argenamt have there one array
 let arrayOfItemsName = ["sony", "red", "nicon", "canon"];
 let arrayOfItemsModel = ["x", "xx", "xxx", "xxxx"];
@@ -49,12 +53,13 @@ for (let i = 0; i < arrayOfItemsName.length; i++) {
   new Cartmaker(
     arrayOfItemsName[i],
     arrayOfItemsModel[i],
-    arrayOfItemsPrice[i]
+    arrayOfItemsPrice[i],
+    arrOfImg[i]
   );
   p[i].textContent = `${arrayOfItemsName[i]}`;
   myBtn[i].setAttribute("id", `${arrayOfItemsName[i]}`);
 }
-
+console.log(Cartmaker.arrayOfObjects);
 // working with added event listener
 for (let i = 0; i < myBtn.length; i++) {
   myBtn[i].addEventListener("click", cartCounterFunc);
