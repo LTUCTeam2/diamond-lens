@@ -15,60 +15,57 @@
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../css/camera.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Otomanopee+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <img id="logiImage" src="../headerImages/DL Logo.png" alt="Logo Image" />
-      <h1>Diamond Lens</h1>
+      <img id="logiImage" src="../headerImages/newLogo.png" alt="Logo Image" />
+      
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li class="dropdown">
-            <a href="cameras.html" class="dropbtn">Cameras</a>
+          <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li class="dropdown">
+                  <a href="cameras.html" class="dropbtn">Cameras</a>
 
-            <div class="dropdown-content">
-              <a class="dropElement" href="#">Link 1</a>
-              <a class="dropElement" href="#">Link 2</a>
-              <a class="dropElement" href="#">Link 3</a>
-              <a class="dropElement" href="#">Link 4</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="accessories.html">Accessories</a>
+                  <div class="dropdown-content">
+                      <a class="dropElement" href="#">Canon</a>
+                      <a class="dropElement" href="#">Sony</a>
+                      <a class="dropElement" href="#">RED</a>
+                      <a class="dropElement" href="#">Nikon</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a href="accessories.html">Accessories</a>
 
-            <div class="dropdown-content">
-              <a class="dropElement" href="#">Link 1</a>
-              <a class="dropElement" href="#">Link 2</a>
-              <a class="dropElement" href="#">Link 3</a>
-              <a class="dropElement" href="#">Link 4</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="../pages/about.html">About </a>
-            <div class="dropdown-content">
-              <a class="dropElement" href="../pages/about.html">About us</a>
-              <a class="dropElement" href="../pages/projectstory.html"
-                >Project Story</a
-              >
-            </div>
-          </li>
-        </ul>
+                  <div class="dropdown-content">
+                      <a class="dropElement" href="#">Canon</a>
+                      <a class="dropElement" href="#">Sony</a>
+                      <a class="dropElement" href="#">RED</a>
+                      <a class="dropElement" href="#">Nikon</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a href="../pages/about.html">About </a>
+                  <div class="dropdown-content">
+                      <a class="dropElement" href="../pages/about.html">About us</a>
+                      <a class="dropElement" href="../pages/projectstory.html">Project Story</a>
+                      <a class="dropElement" href="../pages/feedback.html">Feedback</a>
+                  </div>
+              </li>
+          </ul>
       </nav>
       <a href="../pages/shoppingCart.html">
-        <img
-          id="CartImage"
-          src="https://image.flaticon.com/icons/png/512/126/126083.png"
-          alt="shoping cart"
-      /></a>
-      <span class="spanCartCounter"></span>
+          <img id="CartImage" src="../headerImages/images-removebg-preview.png" alt="shoping cart" /></a>
+      <span class="spanCartCounter">2</span>
 
-      <img
-        id="searchImage"
-        src="https://freepikpsd.com/media/2019/10/white-search-icon-background-Free-PNG-Images-Transparent.png"
-        alt="serch img"
-      />
-    </header>
+      <img id="searchImage"
+          src="../headerImages/search-icon-any-purposes-260nw-1697401045-removebg-preview.png"
+          alt="serch img" />
+  </header>
 
     <main>
       <!-- <iframe width="1515" height="553" src="https://www.youtube.com/embed/-mgHh33igz0" autoplay='1' mute='1'
@@ -85,7 +82,7 @@
       <section id="canoncam">
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/canon 1.jpg" />
+          <img src="../imgCameras/canon 1.jpg" class="camImage" id="canon1"/>
           <div>
             <h2>Canon EOS-1D X</h2>
             <p>Price: $6,499 <br />Megapixels: 20 MP</p>
@@ -94,7 +91,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/canon 2.png" />
+          <img src="../imgCameras/canon 2.png" class="camImage" id="canon2"/>
           <div>
             <h2>Canon EOS 6D</h2>
             <p>Price: $1,399 <br />Megapixels: 26 MP <br />Built-in Wi-Fi</p>
@@ -103,7 +100,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/canon 3.jpg" />
+          <img src="../imgCameras/canon 3.jpg" class="camImage" id="canon3" />
           <div>
             <h2>Canon EOS-1D</h2>
             <p>
@@ -114,7 +111,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/canon 4.jpg" />
+          <img src="../imgCameras/canon 4.jpg" class="camImage" id="canon4" />
           <div>
             <h2>Canon EOS R6</h2>
             <p>
@@ -129,7 +126,7 @@
         <div class="overlay-slide">
           <button>Add To Cart</button>
 
-          <img src="../imgCameras/nikon 1.png" />
+          <img src="../imgCameras/nikon 1.png" class="camImage" id="nikon1" />
           <div>
             <h2>Nikon W150</h2>
             <p>Price: $169.95 <br />Megapixels: 13.2 MP <br />Zoom-NIKKOR 3x</p>
@@ -138,7 +135,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/Nikon 2.png" />
+          <img src="../imgCameras/Nikon 2.png" class="camImage" id="nikon2" />
           <div>
             <h2>Nikon P1000</h2>
             <p>Price: $999.95 <br />Megapixels: 16 MP <br />Zoom-NIKKOR 125x</p>
@@ -147,7 +144,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/nikon 3.png" />
+          <img src="../imgCameras/nikon 3.png" class="camImage" id="nikon3" />
 
           <div>
             <h2>Nikon P950</h2>
@@ -159,7 +156,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/nikon 4.png" />
+          <img src="../imgCameras/nikon 4.png" class="camImage" id="nikon4" />
           <div>
             <h2>Nikon D7500</h2>
             <p>
@@ -176,7 +173,7 @@
       <section id="redcam">
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/red 1.png" />
+          <img src="../imgCameras/red 1.png" class="camImage" id="red1" />
           <div>
             <h2>Red DSMC2 Brain</h2>
             <p>
@@ -186,7 +183,7 @@
         </div>
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/red 2.png" />
+          <img src="../imgCameras/red 2.png" class="camImage" id="red2" />
           <div>
             <h2>Red DSMC2</h2>
             <p>
@@ -198,7 +195,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/red 3.png" />
+          <img src="../imgCameras/red 3.png" class="camImage" id="red3" />
           <div>
             <h2>Red KOMODO</h2>
             <p>
@@ -210,7 +207,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/red 4.png" />
+          <img src="../imgCameras/red 4.png" class="camImage" id="red4" />
           <div>
             <h2>RED Ranger</h2>
             <p>
@@ -224,7 +221,7 @@
       <section id="sonycam">
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/sony1.jpg" />
+          <img src="../imgCameras/sony1.jpg" class="camImage" id="sony1"/>
           <div>
             <h2>Sony Alpha A6400</h2>
             <p>
@@ -235,7 +232,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/sony 2.jpg" />
+          <img src="../imgCameras/sony 2.jpg" class="camImage" id="sony2"/>
           <div>
             <h2>Sony RX100 VII</h2>
             <p>
@@ -245,7 +242,7 @@
         </div>
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/sony 3.jpg" />
+          <img src="../imgCameras/sony 3.jpg" class="camImage" id="sony3"/>
           <div>
             <h2>Sony DSCH300/B</h2>
             <p>
@@ -256,7 +253,7 @@
 
         <div class="overlay-slide">
           <button>Add To Cart</button>
-          <img src="../imgCameras/sony 4.jpg" />
+          <img src="../imgCameras/sony 4.jpg" class="camImage" id="sony4" />
           <div>
             <h2>Sony Alpha A6100</h2>
             <p>Price: $848 <br />Zoom: 16-50 mm<br />Form Factor: Mirrorless</p>
@@ -266,17 +263,14 @@
     </main>
     <footer>
       <h2>Stay Conected</h2>
-      <p id="para">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
-        beatae assumenda veniam esse
-      </p>
+      
 
       <div id="social">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-facebook" style="width: 60px"></a>
+          <a href="#" class="fa fa-twitter" style="width: 60px"></a>
+          <a href="#" class="fa fa-google" style="width: 60px"></a>
+          <a href="#" class="fa fa-linkedin" style="width: 60px"></a>
+          <a href="#" class="fa fa-youtube" style="width: 60px"></a>
       </div>
 
       <p id="copyRights">&copy;Diamond Lens</p>
@@ -284,26 +278,26 @@
       <div id="camerasList">
         <h4>Cameras</h4>
         <nav>
-          <ul>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-          </ul>
+            <ul>
+                <li><a href="#">Canon</a></li>
+                <li><a href="#">Sony</a></li>
+                <li><a href="#">RED</a></li>
+                <li><a href="#">Nikon</a></li>
+            </ul>
         </nav>
-      </div>
-      <div id="AccessoriesList">
+    </div>
+    <div id="AccessoriesList">
         <h4>Accessories</h4>
         <nav>
-          <ul>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-            <li><a href="#">Item Name</a></li>
-          </ul>
+            <ul>
+              <li><a href="#">Canon</a></li>
+              <li><a href="#">Sony</a></li>
+              <li><a href="#">RED</a></li>
+              <li><a href="#">Nikon</a></li>
+            </ul>
         </nav>
-      </div>
-    </footer>
+    </div>
+  </footer>
     <script src="../js/cameras.js"></script>
   </body>
 </html>
