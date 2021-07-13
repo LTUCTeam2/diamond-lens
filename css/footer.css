@@ -1,34 +1,40 @@
 
+  
 footer {
   
   position: relative;
     /* position: absolute; */
     height: 180px;
-    background-color:black;
+    background-color: rgb(236 236 236);
+    border-top: solid 1px rgb(194, 0, 0);
 
     /* bottom: -1200px; */
 
 
     width: 100%;
-    color: white;
+    color: black
 }
 
 
 
   footer #copyRights {
+      font-weight: bolder;
       font-size: 25px;
-      color: white;
+      color: rgb(124, 64, 64);
       position: absolute;
       right: 135px;
       bottom: 30px;
+      font-family: 'Bebas Neue', cursive;
 
   }
 
 footer h2 {
-  color: orange;
+  font-weight: bolder;
+  color: rgb(124, 64, 64);
   position: absolute;
     font-size: 25px;
     left: 7px;
+    font-family: 'Bebas Neue', cursive;
 
 }
 footer #para {
@@ -40,12 +46,14 @@ left: 7px;
 
 footer nav ul li a {
     text-decoration: none;
-    color: grey;
+    color: rgb(0, 0, 0);
     margin: 5px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 footer nav ul {
   margin-left: 50px;
+  font-family: 'Bebas Neue', cursive;
 }
 
 
@@ -53,19 +61,29 @@ footer nav ul {
 
 #camerasList{
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 100px;
+    
 }
 #camerasList h4 {
+  font-weight: bolder;
     font-size: 21px;
-    color: orange;
+    color: rgb(124, 64, 64);
+    font-family: 'Bebas Neue', cursive;
 }
 
 #AccessoriesList{
-  color: orange;
+  color: rgb(124, 64, 64);
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: 100px;
+}
+#AccessoriesList h4 {
+  font-weight: bolder;
+  font-size: 21px;
+  color: rgb(124, 64, 64);
+  font-family: 'Bebas Neue', cursive;
+    
 }
 
 footer nav ul li {
@@ -74,7 +92,12 @@ margin-left: 15px;
 }
 
 footer nav ul li a:hover{
-  color: rgb(233, 130, 130);
+  color: rgb(124, 64, 64);
+}
+footer nav ul li:hover{
+transform: scale(1.1);
+  transition-duration: 0.3s;
+  border-bottom: 1.5px solid rgb(124, 64, 64);
 }
 
 /* #AccessoriesList{
@@ -83,9 +106,7 @@ footer nav ul li a:hover{
     left: 225px;
 } */
 
-#AccessoriesList h4 {
-    font-size: 21px;
-}
+
 
 .fa {
   padding: 20px;
@@ -100,32 +121,33 @@ footer nav ul li a:hover{
 
   
   .fa:hover {
-      background-color: rgb(110, 23, 23);
+      background-color: rgb(124, 64, 64);
+      color: grey;
   }
   
   .fa-facebook {
     background: #6d6d6d;
-    color: white;
+    color: rgb(124, 64, 64);
   }
   
   .fa-twitter {
     background: #6d6d6d;
-    color: white;
+    color: rgb(124, 64, 64);
   }
   
   .fa-google {
     background: #6d6d6d;
-    color: white;
+    color: rgb(124, 64, 64);
   }
   
   .fa-linkedin {
     background: #6d6d6d;
-    color: white;
+    color: rgb(124, 64, 64);
   }
   
   .fa-youtube {
     background: #6d6d6d;
-    color: white;
+    color: rgb(124, 64, 64);
   }
   
 
