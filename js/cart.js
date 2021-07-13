@@ -30,7 +30,8 @@ function remove(id, model) {
     // main.removeChild(sec);
     sec.remove();
     localStorage.removeItem(model);
-    // sec.style.display = "none";
+
+      // sec.style.display = "none";
   });
 }
 //  end of remove button
@@ -71,7 +72,7 @@ function cartKeysChecker() {
           a.setAttribute("class", "containerForCartPage a");
           section.appendChild(a);
           containerForCartPage = document.querySelectorAll(".a");
-          console.log(containerForCartPage[counter]);
+          // console.log(containerForCartPage[counter]);
 
           containerForCartPage[counter].textContent = test[j];
           counter++;
@@ -128,6 +129,14 @@ function camRender() {
     }
   }
 }
+console.log('Camera Total Array', camQmultiplyPArray);
+
+
+camQmultiplyP = camQmultiplyPArray.reduce(add, 0);
+accessQmultiplyP = accessQmultiplyPArray.reduce(add2, 0);
+let sumCamandAccess = camQmultiplyP + accessQmultiplyP;
+
+
 
 function add(accumulator, a) {
   return accumulator + a;
@@ -141,15 +150,18 @@ function totalSection() {
 
   let red = addForArrays(mainQmultiplyPArray);
 
-  let red2 = addForArrays(fixedQmultiplyPArray);
-  let sumCamandAccess = camQmultiplyP + accessQmultiplyP + red + red2;
-  console.log(red);
-  console.log(red + red2);
-  let sectionForTotal = document.createElement("section");
-  sectionForTotal.setAttribute("id", "sectionForTotal");
+
+function totalSection() {
+  let sectionForTotal = document.createElement('section');
+  sectionForTotal.setAttribute('id', 'sectionForTotal');
+
+  
   main.appendChild(sectionForTotal);
   sectionForTotal.textContent = `Total Price: ${sumCamandAccess}`;
 }
+
+
+
 
 function addForArrays(array) {
   let addVar = 0;
@@ -158,6 +170,7 @@ function addForArrays(array) {
   }
   return addVar;
 }
+
 
 // let totalPriceCamAndAccess = 0;
 // for (let i = 0; i < camQmultiplyPArray.length; i++) {
