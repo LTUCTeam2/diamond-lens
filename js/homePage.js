@@ -135,7 +135,7 @@ new Content(
   "4900",
   "sony1",
   "sony",
-  "../images/InnerColumn_images/sony1.webp",
+  "images/InnerColumn_images/sony1 (2).png",
   "DSLR",
   "EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit",
   "l1",
