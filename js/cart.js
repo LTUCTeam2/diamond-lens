@@ -372,11 +372,11 @@ function fixedPacks() {
         containerForCartPage[counter].textContent = arrayForFix2[i];
         camDiv.appendChild(img);
       } else if (i === 3) {
-        let inCart = getLocalStorage(`40000`);
+        let inCart = getLocalStorage(`20000`);
         containerForCartPage[counter].textContent = arrayForFix2[i] * inCart;
       } else if (i === 4) {
         containerForCartPage[counter].textContent =
-          20000 * getLocalStorage(`40000`);
+          20000 * getLocalStorage(`20000`);
       } else {
         containerForCartPage[counter].textContent = arrayForFix2[i];
       }
