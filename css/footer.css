@@ -1,0 +1,164 @@
+
+  
+footer {
+ 
+  position: relative;
+    /* position: absolute; */
+    height: 150px;
+    background-color: #444444;
+    
+
+    /* bottom: -1200px; */
+
+
+    width: 100%;
+    color: #444444 ; 
+}
+
+
+
+
+  footer #copyRights {
+    
+    font-size: 25px;
+    color: #DA0037;
+    position: absolute;
+    right: 702px;
+    bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
+
+  }
+
+
+
+
+
+
+footer nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+footer nav ul {
+  margin-top: 5px;
+  font-family: 'Bebas Neue', cursive;
+  
+}
+
+footer h2 {
+  color: #DA0037;
+  position: absolute;
+  font-size: 30px;
+  right: 164px;
+  font-family: 'Bebas Neue', cursive;
+  top: 30px;
+}
+
+
+#camerasList{
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    
+}
+#camerasList h4 {
+  font-weight: bolder;
+    font-size: 21px;
+    color: #DA0037;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#AccessoriesList{
+  color: #DA0037;
+  position: absolute;
+  top: 65px;
+  left: 50px;
+}
+#AccessoriesList h4 {
+  font-weight: bolder;
+  font-size: 21px;
+  color: #DA0037;
+  font-family: 'Bebas Neue', cursive;
+    
+}
+
+footer nav ul li {
+display: inline-block;
+margin-left: 15px;
+color: #171717;
+}
+
+footer nav ul li a{
+  color: #171717;
+}
+
+footer nav ul li a:hover{
+  color: #DA0037;
+}
+footer nav ul li:hover{
+transform: scale(1.1);
+  transition-duration: 0.05s;
+  border-bottom: 1.5px solid #DA0037;
+}
+
+/* #AccessoriesList{
+    position: absolute;
+    top: 50px;
+    left: 225px;
+} */
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  
+}
+
+  
+  .fa:hover {
+      background-color: #EDEDED;
+      color: #DA0037;
+  }
+  
+  .fa-facebook {
+    background: #171717;
+    color: #DA0037;
+  }
+  
+  .fa-twitter {
+    background: #171717;
+    color: #DA0037;
+  }
+  
+  .fa-google {
+    background: #171717;
+    color: #DA0037;
+  }
+  
+  .fa-linkedin {
+    background: #171717;
+    color: #DA0037;
+  }
+  
+  .fa-youtube {
+    background: #171717;
+    color: #DA0037;
+  }
+  
+
+
+  #social {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    width: 400px;
+      
+  }

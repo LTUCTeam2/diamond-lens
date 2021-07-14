@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  background: #ededed;
+}
+/* big images */
+.big {
+  width: 100%;
+  height: 70%;
+}
+main {
+  width: 100%;
+
+  display: flex;
+  align-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/* section for mid images */
+.second_sec_contain_4img,
+.last_sec_contain_4img {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+/* 4 img images */
+.MidImages {
+  width: 100%;
+}
+
+.divMIDContinuer {
+  width: 300px;
+  box-shadow: 0 8px 8px -4px #e6adad;
+}
+.myPrag {
+  padding: 20px;
+  text-align: justify;
+}
+
+.first_sec_big_img,
+.thered_sec {
+  width: 100%;
+  position: relative;
+}
+.first_sec_big_img:before,
+.first_sec_big_img:after,
+.thered_sec:before,
+.thered_sec:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+
+  box-shadow: 0 35px 20px #777;
+
+  transform: rotate(-8deg);
+}
+.first_sec_big_img:after,
+.thered_sec:after {
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+.testImg {
+  height: 100%;
+  width: 100%;
+  transition-duration: 300ms;
+  transition-delay: 150ms;
+  /* transition-duration: */
+  transition-timing-function: ease-in-out;
+}
+
+.testImg:hover {
+  transform: scale(1.05);
+}
+.scaleTest {
+  overflow: hidden;
+}
+.test {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+.divTest {
+  width: 38%;
+  box-shadow: 0 8px 8px -4px #e6adad;
+}
+
+button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+.containerForSlideShow {
+  height: 450px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  background: url(../accessories-img/pexels-lisa-2508735.jpg);
+  background-size: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #e6adad96;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.containerForSlideShow:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hide2 {
+  display: none;
+}
+.small {
+  width: 50px;
+  margin-left: 20px;
+  transition: 0.5s ease;
+  display: inline-block;
+}
+.smallImg {
+  width: 50px;
+
+  height: 32px;
+}
+.small :hover {
+  cursor: pointer;
+  box-shadow: 1px 0px 20px 9px #e6adad;
+}

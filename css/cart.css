@@ -1,0 +1,23 @@
+main{
+  min-height: 490px;
+}
+
+
+.containerForCartPage {
+  display: flex;
+  margin: 0px 118.6px;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+hr {
+  width: 100%;
+  height: 25px;
+  background: url(../accessories-img/pexels-lisa-2508735.jpg);
+}
+
+button {
+  margin-left: 20px;
+}
