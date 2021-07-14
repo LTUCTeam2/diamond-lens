@@ -20,7 +20,7 @@ main {
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  /* border: 3px solid #f1f1f1; */
   position: absolute;
   top: 12%;
   left: 50%;
@@ -28,6 +28,10 @@ main {
   z-index: 2;
   padding: 20px;
   text-align: center;
+}
+.hero-Header{
+  font-size: 35px;
+  font-weight: 200;
 }
 
 .slideshow-container img{

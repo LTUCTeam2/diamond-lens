@@ -15,12 +15,12 @@ function aTagTest(e) {
 // function clicked(e) {}
 
 /* constr for test*/
-let Accessors = function (Name, type, modal, prices, barcode) {
+let Accessors = function (Name, type, modal, prices, img) {
   this.Name = Name;
   this.type = type;
   this.modal = modal;
   this.prices = prices;
-  this.barcode = barcode;
+  this.barcode = img;
   Accessors.arrayOfAccessories.push(this);
 };
 Accessors.arrayOfAccessories = [];
@@ -29,7 +29,13 @@ Accessors.arrayOfAccessories = [];
 // let l = Accessors.arrayOfAccessories.map((x) => x);
 function objMaker() {
   for (let i = 0; i < aTag.length; i++) {
-    new Accessors("I" + i, "t" + i, "M" + i, 300 + i * 25 + 1234 + i * 2);
+    new Accessors(
+      "I" + i,
+      "t" + i,
+      "M" + i,
+      300 + i * 25 + 1234 + i * 2,
+      document.querySelectorAll("MidImages").src
+    );
   }
 }
 function nameAssigner() {
