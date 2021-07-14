@@ -5,14 +5,14 @@ footer {
   position: relative;
     /* position: absolute; */
     height: 150px;
-    background-color: #444444;
+    background-color: black;
     
 
     /* bottom: -1200px; */
 
 
     width: 100%;
-    color: #444444 ; 
+    color: #171717 ; 
 }
 
 
@@ -21,7 +21,7 @@ footer {
   footer #copyRights {
     
     font-size: 25px;
-    color: #DA0037;
+    color: #ededed;
     position: absolute;
     right: 702px;
     bottom: 10px;
@@ -36,7 +36,7 @@ footer {
 
 footer nav ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #ededed;
     margin: 5px;
     font-family: 'Bebas Neue', cursive;
 }
@@ -71,7 +71,7 @@ footer h2 {
 }
 
 #AccessoriesList{
-  color: #DA0037;
+  color: #ededed;
   position: absolute;
   top: 65px;
   left: 50px;
@@ -87,11 +87,11 @@ footer h2 {
 footer nav ul li {
 display: inline-block;
 margin-left: 15px;
-color: #171717;
+color: #ededed;
 }
 
 footer nav ul li a{
-  color: #171717;
+  color: #ededed;
 }
 
 footer nav ul li a:hover{
@@ -124,32 +124,32 @@ transform: scale(1.1);
 
   
   .fa:hover {
-      background-color: #EDEDED;
-      color: #DA0037;
+      background-color:#DA0037;
+      color: #ededed;
   }
   
   .fa-facebook {
-    background: #171717;
+    background: #ededed;
     color: #DA0037;
   }
   
   .fa-twitter {
-    background: #171717;
+    background: #ededed;
     color: #DA0037;
   }
   
   .fa-google {
-    background: #171717;
+    background: #ededed;
     color: #DA0037;
   }
   
   .fa-linkedin {
-    background: #171717;
+    background: #ededed;
     color: #DA0037;
   }
   
   .fa-youtube {
-    background: #171717;
+    background: #ededed;
     color: #DA0037;
   }
   
