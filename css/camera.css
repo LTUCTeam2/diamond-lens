@@ -29,7 +29,8 @@ main {
 #firstfullwidthimage {
   width: 100%;
   display: flex;
-  height: auto;
+  /* height: auto; */
+  height: 577px;
   /* margin-bottom: 556px; */
   /* margin-top: 235px; */
   flex-direction: column;

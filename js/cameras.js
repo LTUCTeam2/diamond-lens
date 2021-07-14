@@ -96,15 +96,15 @@ function updateCartNumbers() {
 
 let test;
 
-let constructorOfCameras = localStorage.setItem(
-  "cam",
-  JSON.stringify(Cameras.arrayObj)
-);
 
 function handleClick(event) {
   let numOfClicks = localStorage.getItem("inCart");
   numOfClicks = parseInt(numOfClicks);
-
+  let constructorOfCameras = localStorage.setItem(
+    "cam",
+    JSON.stringify(Cameras.arrayObj)
+  );
+  
   if (numOfClicks) {
     localStorage.setItem("inCart", numOfClicks + 1);
     document.querySelector(".spanCartCounter").textContent = numOfClicks + 1;
