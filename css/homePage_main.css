@@ -29,6 +29,10 @@ main {
   padding: 20px;
   text-align: center;
 }
+.hero-Header{
+  font-size: 35px;
+  font-weight: 200;
+}
 
 .slideshow-container img{
 width:100%;
