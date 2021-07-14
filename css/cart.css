@@ -8,6 +8,9 @@
   text-align: justify;
   line-height: 25px;
 }
+.fixed {
+  height: 150px;
+}
 main {
   min-height: 490px;
 }
@@ -21,7 +24,7 @@ main {
   max-width: 70px;
 }
 section {
-  height: 220px;
+  height: 200px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

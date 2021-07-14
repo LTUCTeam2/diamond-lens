@@ -92,6 +92,7 @@ for (let i = 0; i < myBtn.length; i++) {
 }
 // event listener function
 function cartCounterFunc(e) {
+  localStorage.setItem("acces", JSON.stringify(Cartmaker.arrayOfObjects));
   setContentForCart();
   cartChecker(e.target.id);
 }

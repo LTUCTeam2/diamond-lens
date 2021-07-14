@@ -26,13 +26,14 @@ function remove(id, model) {
   deleteButton.setAttribute("class", id);
   let sec = document.querySelector(`.${id}`);
   let hr = document.querySelector(`.${id}+hr`);
+  console.log(sec);
   sec.appendChild(deleteButton);
   deleteButton.textContent = "X";
   let addForPrices = 0;
   del = totalSection();
   deleteButton.addEventListener("click", (e) => {
-    console.log(hr);
     localStorage.removeItem(model);
+    console.log(hr);
     console.log(`.${e.target.classList[0]}`);
     console.log(
       document.querySelector(`.${e.target.classList[0]}div:nth-child(5)`)
@@ -130,9 +131,9 @@ function camRender() {
         let abcArray = [];
         abcArray.push(abc.Name);
         abcArray.push(abc.Model);
-        abcArray.push(abc.Price);
+        abcArray.push(Math.trunc(abc.Price));
         abcArray.push(abc.inCart);
-        camQmultiplyP = abc.inCart * abc.Price;
+        camQmultiplyP = abc.inCart * Math.trunc(abc.Price);
         abcArray.push(camQmultiplyP);
         camQmultiplyPArray.push(camQmultiplyP);
 
@@ -174,10 +175,13 @@ let fixedQmultiplyPArray = [];
 function totalSection() {
   camQmultiplyP = camQmultiplyPArray.reduce(add, 0);
   accessQmultiplyP = accessQmultiplyPArray.reduce(add, 0);
+  console.log("main", mainQmultiplyPArray);
+  console.log("fixed", fixedQmultiplyPArray);
 
   let red = addForArrays(mainQmultiplyPArray);
   let red2 = addForArrays(fixedQmultiplyPArray);
-
+  console.log("red", red);
+  console.log("red2", red2);
   let sumCamandAccess = camQmultiplyP + accessQmultiplyP + red + red2;
   return sumCamandAccess;
 }
@@ -228,15 +232,20 @@ function cartKeysForMAinPage() {
         arrayOfProperty.push(mainArray.packageName);
         arrayOfProperty.push("");
         arrayOfProperty.push(mainArray.packagePrice);
-        arrayOfProperty.push(1);
-        arrayOfProperty.push(Number.parseInt(mainArray.packagePrice));
+        arrayOfProperty.push(mainArray.inCart);
+        console.log(mainArray.inCart);
+        arrayOfProperty.push(
+          Number.parseInt(mainArray.packagePrice) * mainArray.inCart
+        );
         // ================================================================
         arrayOfPropertyNames.push(mainArray.cameraName);
         arrayOfPropertyNames.push(mainArray.lensDescription);
         arrayOfPropertyNames.push(mainArray.micDescription);
         mainQmultiplyPArray.push(
-          Number.parseInt(mainArray.packagePrice)
-        ) /* * arrayOfLocalStorage[i].inCart*/;
+          Number.parseInt(mainArray.packagePrice) *
+            Number.parseInt(mainArray.inCart)
+        );
+        console.log(mainQmultiplyPArray);
         let section = document.createElement("section");
         section.setAttribute("class", `n${mainArray.packagePrice}`);
         let hr = document.createElement("hr");
@@ -277,12 +286,14 @@ function cartKeysForMAinPage() {
 
           counter++;
         }
-        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
         main.appendChild(hr);
+        remove(`n${mainArray.packagePrice}`, mainArray.packagePrice);
       }
     }
   }
 }
+// fixed arrays
+
 let arrayForFix = ["Red Pack", "", 40000, 1, 40000];
 let arrayForFix2 = ["nikon Pack", "", 20000, 1, 20000];
 let arrayForFixModel1 = [
@@ -298,13 +309,14 @@ let arrayForFixModel2 = [
 
 let fixed = getLocalStorage(`40000`);
 let fixed2 = getLocalStorage(`20000`);
+// fixed render function
 function fixedPacks() {
   if (fixed !== null || fixed2 !== null) {
     if (fixed !== null) {
       let fixedSection = document.createElement("section");
       fixedSection.setAttribute("id", "sectionForFixed");
       main.appendChild(fixedSection);
-      fixedQmultiplyPArray.push(Number.parseInt(fixed));
+      fixedQmultiplyPArray.push(Number.parseInt(fixed * 40000));
       for (let i = 0; i < arrayForFix.length; i++) {
         let camDiv = document.createElement("div");
         camDiv.setAttribute("class", "containerForCartPage a");
@@ -321,6 +333,12 @@ function fixedPacks() {
 
           containerForCartPage[counter].textContent = arrayForFix[i];
           camDiv.appendChild(img);
+        } else if (i === 3) {
+          let inCart = getLocalStorage(`40000`);
+          containerForCartPage[counter].textContent = arrayForFix[i] * inCart;
+        } else if (i === 4) {
+          containerForCartPage[counter].textContent =
+            40000 * getLocalStorage(`40000`);
         } else {
           containerForCartPage[counter].textContent = arrayForFix[i];
         }
@@ -331,14 +349,14 @@ function fixedPacks() {
       main.appendChild(hr);
       fixedSection.setAttribute("class", "sectionForFixedcls");
 
-      remove(`sectionForFixedcls`, fixed);
+      remove(`sectionForFixedcls`, `40000`);
     }
   }
   if (fixed2 !== null) {
     let fixedSection = document.createElement("section");
     fixedSection.setAttribute("id", "sectionForFixed2");
     main.appendChild(fixedSection);
-    fixedQmultiplyPArray.push(Number.parseInt(fixed2));
+    fixedQmultiplyPArray.push(Number.parseInt(fixed2 * 20000));
     for (let i = 0; i < arrayForFix2.length; i++) {
       let camDiv = document.createElement("div");
       camDiv.setAttribute("class", "containerForCartPage a");
@@ -353,6 +371,12 @@ function fixedPacks() {
         img.src = `../cartimg/nikonPack.PNG`;
         containerForCartPage[counter].textContent = arrayForFix2[i];
         camDiv.appendChild(img);
+      } else if (i === 3) {
+        let inCart = getLocalStorage(`40000`);
+        containerForCartPage[counter].textContent = arrayForFix2[i] * inCart;
+      } else if (i === 4) {
+        containerForCartPage[counter].textContent =
+          20000 * getLocalStorage(`40000`);
       } else {
         containerForCartPage[counter].textContent = arrayForFix2[i];
       }
@@ -363,7 +387,7 @@ function fixedPacks() {
     main.appendChild(fixedSection);
     main.appendChild(hr);
     fixedSection.setAttribute("class", "sectionForFixed2cls");
-    remove(`sectionForFixed2cls`, fixed2);
+    remove(`sectionForFixed2cls`, `20000`);
   }
 }
 
