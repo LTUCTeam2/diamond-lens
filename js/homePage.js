@@ -99,15 +99,15 @@ new Content(
   "5000",
   "canon1",
   "canon",
-  "../images/InnerColumn_images/canon.png",
+  "images/InnerColumn_images/canon.png",
   "DSLR",
   "EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit",
   "l1",
-  "../images/InnerColumn_images/l1.png",
+  "images/InnerColumn_images/l1.png",
   "Macro",
   "RF100mm F2.8 L MACRO IS USM",
   "mic",
-  "../images/InnerColumn_images/mic.gif",
+  "images/InnerColumn_images/mic.gif",
   "Microphone",
   "Directional Microphone DM-E1",
   "canon"
@@ -117,15 +117,15 @@ new Content(
   "5300",
   "canon2",
   "canon2",
-  "../images/InnerColumn_images/canon2.png",
+  "images/InnerColumn_images/canon2.png",
   "DSLR",
   "EOS RP RF24-105mm F4-7.1 IS STM Lens Kit",
   "l2",
-  "../images/InnerColumn_images/l2.png",
+  "images/InnerColumn_images/l2.png",
   "Telephoto Zoom",
   "RF70-200mm F4 L IS USM",
   "mic2",
-  "../images/InnerColumn_images/mic2.png",
+  "images/InnerColumn_images/mic2.png",
   "Microphone",
   "Stereo Microphone DME100",
   "canon"
@@ -135,15 +135,15 @@ new Content(
   "4900",
   "sony1",
   "sony",
-  "../images/InnerColumn_images/sony1.webp",
+  "images/InnerColumn_images/sony1 (2).png",
   "DSLR",
   "EOS Rebel T8i EF-S 18-55mm IS STM Lens Kit",
   "l1",
-  "../images/InnerColumn_images/l1.png",
+  "images/InnerColumn_images/l1.png",
   "Macro",
   "RF100mm F2.8 L MACRO IS USM",
   "mic",
-  "../images/InnerColumn_images/mic.gif",
+  "images/InnerColumn_images/mic.gif",
   "Microphone",
   "Directional Microphone DM-E1",
   "sony"
@@ -157,16 +157,15 @@ new Content(
   "DSLR",
   "EOS RP RF24-105mm F4-7.1 IS STM Lens Kit",
   "l2",
-  "../images/InnerColumn_images/l2.png",
+  "images/InnerColumn_images/l2.png",
   "Telephoto Zoom",
   "RF70-200mm F4 L IS USM",
   "mic2",
-  "../images/InnerColumn_images/mic2.png",
+  "images/InnerColumn_images/mic2.png",
   "Microphone",
   "Stereo Microphone DME100",
   "sony"
 );
-
 
 // console.log(Content.contentArray);
 
@@ -312,24 +311,61 @@ renderContent();
 
 function handler(event) {
   if (event.target.id === "btn1") {
-    localStorage.setItem(
-      p1.textContent,
-      JSON.stringify(Content.contentArray[pack2])
-    ); // canon
+    if (localStorage.getItem(p1.textContent) === null) {
+      Content.contentArray[pack2].inCart = 1;
+      localStorage.setItem(
+        p1.textContent,
+        JSON.stringify(Content.contentArray[pack2])
+      );
+    } else {
+      Content.contentArray[pack2].inCart++;
+      localStorage.setItem(
+        p1.textContent,
+        JSON.stringify(Content.contentArray[pack2])
+      );
+    }
+    cart();
   } else if (event.target.id === "btn2") {
-    localStorage.setItem(
-      p2.textContent,
-      JSON.stringify(Content.contentArray[pack4])
-    ); // sony
+    // sony
+    if (localStorage.getItem(p2.textContent) === null) {
+      Content.contentArray[pack4].inCart = 1;
+      localStorage.setItem(
+        p2.textContent,
+        JSON.stringify(Content.contentArray[pack4])
+      );
+    } else {
+      Content.contentArray[pack4].inCart++;
+      localStorage.setItem(
+        p2.textContent,
+        JSON.stringify(Content.contentArray[pack4])
+      );
+    }
+    cart();
   } else if (event.target.id === "btn3") {
     p3.textContent;
-    localStorage.setItem(p3.textContent, p3.textContent);
+    if (localStorage.getItem(p3.textContent) !== null) {
+      localStorage.setItem(
+        p3.textContent,
+        Number.parseInt(localStorage.getItem(p3.textContent)) + 1
+      );
+    } else {
+      localStorage.setItem(p3.textContent, 1);
+    }
+    cart();
     //console.log(p3.textContent);
     // from html
   } else if (event.target.id === "btn4") {
     // from html
     p4.textContent;
-    localStorage.setItem(p4.textContent, p4.textContent);
+    if (localStorage.getItem(p4.textContent) !== null) {
+      localStorage.setItem(
+        p4.textContent,
+        Number.parseInt(localStorage.getItem(p4.textContent)) + 1
+      );
+    } else {
+      localStorage.setItem(p4.textContent, 1);
+    }
+    cart();
   }
 
   saveInLocalStorage();
@@ -344,4 +380,21 @@ console.log(p1.textContent);
 function saveInLocalStorage() {
   const converted_Content_Array = JSON.stringify(Content.contentArray);
   localStorage.setItem("MainPageContent", converted_Content_Array);
+}
+let spanCartCounter = document.querySelector(".spanCartCounter");
+spanCartCounter.textContent = localStorage.getItem("inCart");
+function cart() {
+  if (localStorage.getItem("inCart") !== null) {
+    let spanCartCounter = document.querySelector(".spanCartCounter");
+    localStorage.setItem(
+      "inCart",
+      Number.parseInt(localStorage.getItem("inCart")) + 1
+    );
+    spanCartCounter.textContent = Number.parseInt(
+      localStorage.getItem("inCart")
+    );
+  } else {
+    localStorage.setItem("inCart", 1);
+    spanCartCounter.textContent = localStorage.getItem("inCart");
+  }
 }
