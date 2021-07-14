@@ -4,9 +4,13 @@
     text-align: center;
     margin: 15px;
     font-weight:bolder;
+    
 }
 /* +++++++++copy +++++++++ */
 
+body {
+  background-color: #EDEDED;
+}
 
 /* ++++++++++++opast+++++++++++++++ */
 

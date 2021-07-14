@@ -10,7 +10,7 @@ header {
     box-sizing: border-box;
     background-color: #444444;
     /* border-bottom: solid 1px rgb(194, 0, 0); */
-    position: relative;
+    position: sticky;
     margin: 0;
     z-index: 9999998;
 
@@ -31,9 +31,10 @@ header {
 
 header #logiImage {
   position: absolute;
-  width: 100px;
-  left: 20px;
-  top: 0px;
+    width: 200px;
+    left: 20px;
+    top: 0px;
+    height: 100px;
 }
 
 header pre {
