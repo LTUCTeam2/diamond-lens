@@ -1,6 +1,7 @@
 
 body {
   background-color: #f8f4f494;
+  position: relative;
 }
 
 header {
@@ -8,33 +9,38 @@ header {
       width: 100%;
     height: 100px;
     box-sizing: border-box;
-    background-color: #444444;
+    background-color: #000000;
     /* border-bottom: solid 1px rgb(194, 0, 0); */
     position: sticky;
-    margin: 0;
+    top: 0;
     z-index: 9999998;
+    
 
 }
-.spanCartCounter {
-  color: #eee;
-  position: absolute;
-  top: 56px;
-  right: 25px;
-}
+
 
 .spanCartCounter {
   color: #DA0037;
   position: absolute;
-  top: 46px;
-  right: 25px;
+  top: 44px;
+  right: 22px;
+  font-size: 15px;
 }
 
 header #logiImage {
   position: absolute;
-    width: 200px;
+    width: 71px;
     left: 20px;
-    top: 0px;
-    height: 100px;
+    top: 14px;
+}
+
+#logiText{
+  position: absolute;
+    top: 29px;
+    left: 93px;
+    color: #DA0037;
+    font-size: 49px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 header pre {
@@ -54,12 +60,12 @@ header nav ul li {
   font-family: 'Bebas Neue', cursive;
 }
 header nav ul li:hover {
-  transform: scale(1.1);
-  transition-duration: 0.05s;
+  transform: scale(1.15);
+  
 }
 header nav ul li a {
   text-decoration: none;
-  color: black;
+  color: #ededed;
 }
 
 header nav ul li a:hover {
@@ -67,7 +73,7 @@ header nav ul li a:hover {
 
 
   border-bottom: 3px solid rgb(124, 64, 64);
-  transition-duration: 1s;
+  
 }
 
 header nav ul {
@@ -78,10 +84,11 @@ header nav ul {
 }
 
 #CartImage {
-  width: 47px;
+  width: 49px;
   position: absolute;
-  right: 15px;
-  top: 34px;;
+  right: 10px;
+  top: 26px;
+  
 }
 #CartImage:hover {
   transform: scale(1.2);
@@ -90,12 +97,10 @@ header nav ul {
 }
 #searchImage {
     
-  width: 58px;
+  width: 44px;
     position: absolute;
-    right: 70px;
+    right: 73px;
     top: 27px;
-    padding: 0px;
-  
   
   padding: 0px;
   
