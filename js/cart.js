@@ -131,9 +131,9 @@ function camRender() {
         let abcArray = [];
         abcArray.push(abc.Name);
         abcArray.push(abc.Model);
-        abcArray.push(abc.Price);
+        abcArray.push(Math.trunc(abc.Price));
         abcArray.push(abc.inCart);
-        camQmultiplyP = abc.inCart * abc.Price;
+        camQmultiplyP = abc.inCart * Math.trunc(abc.Price);
         abcArray.push(camQmultiplyP);
         camQmultiplyPArray.push(camQmultiplyP);
 
