@@ -318,11 +318,9 @@ function handler(event) {
         JSON.stringify(Content.contentArray[pack2])
       );
     } else {
-      Content.contentArray[pack2].inCart++;
-      localStorage.setItem(
-        p1.textContent,
-        JSON.stringify(Content.contentArray[pack2])
-      );
+      let getTheItemf = JSON.parse(localStorage.getItem(p1.textContent));
+      getTheItemf.inCart++;
+      localStorage.setItem(p1.textContent, JSON.stringify(getTheItemf));
     }
     cart();
   } else if (event.target.id === "btn2") {
@@ -334,11 +332,9 @@ function handler(event) {
         JSON.stringify(Content.contentArray[pack4])
       );
     } else {
-      Content.contentArray[pack4].inCart++;
-      localStorage.setItem(
-        p2.textContent,
-        JSON.stringify(Content.contentArray[pack4])
-      );
+      let getTheItem = JSON.parse(localStorage.getItem(p2.textContent));
+      getTheItem.inCart++;
+      localStorage.setItem(p2.textContent, JSON.stringify(getTheItem));
     }
     cart();
   } else if (event.target.id === "btn3") {

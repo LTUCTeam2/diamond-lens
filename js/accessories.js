@@ -44,32 +44,32 @@ Cartmaker.arrayOfObjects = [];
 console.log(arrOfImg);
 // make constructor using array that will be used in the cart every argenamt have there one array
 let arrayOfItemsName = [
-  "POLAM-FOTO",
-  "SonyLens",
-  "Neewer",
-  "SMALLRIG",
+  `POLAMFOTO`,
+  `SonyLens`,
+  `Neewer`,
+  `SMALLRIG`,
   `ULANZIU`,
-  `Neewer `,
+  `NeewerPlastic`,
   `Poyinco`,
   `Tilta`,
   `Olympus`,
   `Tiffen`,
   `Topmener`,
-  `ROCAPRAW `,
+  `ROCAPRAW`,
 ];
 let arrayOfItemsModel = [
-  "POLAM-FOTO 140 Centimeters ",
+  "POLAM-FOTO 140 Centimeters",
   `Wide Angle, Normal`,
   "Dimensions LxWxH",
   "Top Handle",
   `GripPro`,
-  `Plastic 15 mm Rail Rods `,
+  `Plastic 15 mm Rail Rods`,
   `Grip Camera`,
   `Mountings`,
-  `Lens Coating `,
-  `Filter Thread `,
-  `Flex Clamp Mount `,
-  `Action Cameras Head Mount `,
+  `Lens Coating`,
+  `Filter Thread`,
+  `Flex Clamp Mount`,
+  `Action Cameras Head Mount`,
 ];
 let arrayOfItemsPrice = [69, 200, 69, 150, 69, 50, 16, 17, 12, 299, 100, 89];
 let p = document.querySelectorAll(".myPrag");
@@ -92,9 +92,11 @@ for (let i = 0; i < myBtn.length; i++) {
 }
 // event listener function
 function cartCounterFunc(e) {
-  localStorage.setItem("acces", JSON.stringify(Cartmaker.arrayOfObjects));
   setContentForCart();
   cartChecker(e.target.id);
+  if (getLocalStorage(`acces`) === null) {
+    localStorage.setItem("acces", JSON.stringify(Cartmaker.arrayOfObjects));
+  }
 }
 spanCartCounter.textContent = getLocalStorage("inCart");
 // function that get the index for the object
@@ -118,16 +120,16 @@ function cartChecker(id) {
     getLocalStorage(Cartmaker.arrayOfObjects[objectGrader(id)].Name) === null
   ) {
     Cartmaker.arrayOfObjects[objectGrader(id)].inCart = 1;
+    console.log(Cartmaker.arrayOfObjects[objectGrader(id)].inCart);
     setLocalStorage(
       Cartmaker.arrayOfObjects[objectGrader(id)].Name,
       Cartmaker.arrayOfObjects[objectGrader(id)]
     );
   } else {
-    Cartmaker.arrayOfObjects[objectGrader(id)].inCart++;
-    setLocalStorage(
-      Cartmaker.arrayOfObjects[objectGrader(id)].Name,
-      Cartmaker.arrayOfObjects[objectGrader(id)]
+    let test2 = getLocalStorage(
+      Cartmaker.arrayOfObjects[objectGrader(id)].Name
     );
+    console.log(test2.inCart++);
+    setLocalStorage(Cartmaker.arrayOfObjects[objectGrader(id)].Name, test2);
   }
 }
-localStorage.setItem("acces", JSON.stringify(Cartmaker.arrayOfObjects));

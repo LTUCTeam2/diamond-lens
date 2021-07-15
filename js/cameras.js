@@ -96,15 +96,16 @@ function updateCartNumbers() {
 
 let test;
 
-
 function handleClick(event) {
+  if (localStorage.getItem(`cam`) === null) {
+    let constructorOfCameras = localStorage.setItem(
+      "cam",
+      JSON.stringify(Cameras.arrayObj)
+    );
+  }
   let numOfClicks = localStorage.getItem("inCart");
   numOfClicks = parseInt(numOfClicks);
-  let constructorOfCameras = localStorage.setItem(
-    "cam",
-    JSON.stringify(Cameras.arrayObj)
-  );
-  
+
   if (numOfClicks) {
     localStorage.setItem("inCart", numOfClicks + 1);
     document.querySelector(".spanCartCounter").textContent = numOfClicks + 1;
@@ -134,14 +135,17 @@ console.log(Cameras.arrayObj);
 function setLocalStorage() {
   if (getFromLocal() === null) {
     Cameras.arrayObj[test].inCart = 1;
+    console.log(Cameras.arrayObj[test].inCart);
     let newModel = JSON.stringify(Cameras.arrayObj[test]);
-    newModel = localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
+    localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
     // let newImage = localStorage.setItem(Cameras.arrayObj[test].Img, newModel);
   } else {
+    let test2 = JSON.parse(getFromLocal());
+    test2.inCart++;
     Cameras.arrayObj[test].inCart++;
-    let newModel = JSON.stringify(Cameras.arrayObj[test]);
-    newModel = localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
-    let newImage = localStorage.setItem(Cameras.arrayObj[test].Img, newModel);
+    console.log(Cameras.arrayObj[test].inCart);
+    let newModel = JSON.stringify(test2);
+    localStorage.setItem(Cameras.arrayObj[test].Model, newModel);
   }
 }
 
