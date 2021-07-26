@@ -8,6 +8,7 @@ body {
   margin: 0 auto;
   background: #f1f1f1;
 }
+
 /* big images */
 .big {
   width: 100%;
@@ -47,6 +48,8 @@ main {
 .myPrag2 {
   padding: 20px;
   text-align: center;
+  max-width: 100%;
+  max-height: 12rem;
 }
 
 .first_sec_big_img,
@@ -91,6 +94,7 @@ main {
 }
 .scaleTest {
   overflow: hidden;
+  height: min(100vh, 100vw);
 }
 .test {
   margin-top: 35px;
@@ -100,10 +104,11 @@ main {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
 }
 .divTest {
   width: 38%;
+  max-height: 38%;
   box-shadow: 0 8px 8px -4px #da0037;
 }
 
@@ -188,4 +193,96 @@ button:hover {
 }
 .secImg {
   height: 532px;
+}
+img {
+  max-width: 100%;
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+
+  img {
+    max-height: 100%;
+  }
+  .divMIDContinuer {
+    width: max(10rem, 5rem);
+    height: max(35rem, 10rem);
+  }
+  .second_sec_contain_4img,
+  .last_sec_contain_4img {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+  nav {
+    position: unset;
+  }
+  ul {
+    display: flex;
+    position: unset !important;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    font-size: small !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: auto !important;
+  }
+  header h2 {
+    display: none;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #CartImage,
+  #searchImage {
+    max-width: 11% !important;
+  }
+  header #logiImage {
+    max-width: 11% !important;
+  }
+  .myPrag2,
+  .myPrag {
+    font-size: 0.4rem !important;
+    min-height: 4rem !important;
+    max-height: 4rem !important;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+  footer {
+    display: none;
+  }
+}
+div {
+  height: min(20%, 100%);
+}
+@media screen and (max-width: 274px) {
+  #searchImage {
+    display: none;
+  }
 }
